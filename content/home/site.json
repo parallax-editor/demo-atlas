@@ -386,8 +386,7 @@
     },
     {
       "id": "manifiesto",
-      "height": "220vh",
-      "scrollBehavior": "pinned",
+      "height": "130vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #101830 0%, #0d1428 100%)"
@@ -451,8 +450,8 @@
                   "from": 0,
                   "to": 100,
                   "range": [
-                    0.05,
-                    0.6
+                    0.1,
+                    0.55
                   ]
                 },
                 {
@@ -476,7 +475,7 @@
               "semanticTag": "p",
               "position": {
                 "x": 28,
-                "y": 22
+                "y": 26
               },
               "fontSize": "12px",
               "fontWeight": 600,
@@ -497,8 +496,8 @@
                   "from": 0,
                   "to": 1,
                   "range": [
-                    0,
-                    0.2
+                    0.05,
+                    0.25
                   ]
                 }
               ]
@@ -510,7 +509,7 @@
               "semanticTag": "h2",
               "position": {
                 "x": 28,
-                "y": 40
+                "y": 42
               },
               "font": "Cormorant Garamond",
               "fontSize": "clamp(34px, 5vw, 72px)",
@@ -554,7 +553,7 @@
               "semanticTag": "p",
               "position": {
                 "x": 28,
-                "y": 66
+                "y": 62
               },
               "fontSize": "clamp(12px, 1.2vw, 15px)",
               "color": "#7f95bd",
@@ -574,8 +573,8 @@
                   "from": 0,
                   "to": 1,
                   "range": [
-                    0.25,
-                    0.5
+                    0.2,
+                    0.45
                   ]
                 }
               ]
@@ -880,7 +879,7 @@
     },
     {
       "id": "profundidad",
-      "height": "130vh",
+      "height": "110vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #03121f 0%, #071726 100%)"
@@ -902,7 +901,7 @@
               "alt": "Cordillera difusa",
               "position": {
                 "x": 50,
-                "y": 62
+                "y": 55
               },
               "size": {
                 "width": 115,
@@ -936,7 +935,7 @@
               "alt": "Luna en 3D",
               "position": {
                 "x": 68,
-                "y": 34
+                "y": 30
               },
               "size": {
                 "width": 15,
@@ -989,7 +988,7 @@
               "alt": "Cordillera en primer plano",
               "position": {
                 "x": 50,
-                "y": 92
+                "y": 88
               },
               "size": {
                 "width": 125,
@@ -1017,7 +1016,7 @@
               "semanticTag": "h2",
               "position": {
                 "x": 32,
-                "y": 42
+                "y": 36
               },
               "font": "Cormorant Garamond",
               "fontSize": "clamp(28px, 3.6vw, 52px)",
@@ -1049,7 +1048,7 @@
               "semanticTag": "p",
               "position": {
                 "x": 32,
-                "y": 53
+                "y": 47
               },
               "fontSize": "clamp(13px, 1.3vw, 16px)",
               "color": "#7f95bd",
