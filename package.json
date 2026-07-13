@@ -1,0 +1,22 @@
+{
+  "name": "demo-atlas",
+  "version": "0.1.0",
+  "description": "Showcase del preset linked-home de Parallax Engine: un home editable que enlaza mundos inmersivos con cross-fade in-engine.",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "test": "node tests/validate.mjs"
+  },
+  "dependencies": {
+    "@parallax-editor/parallax-engine": "^0.2.6",
+    "vue": "^3.4.38"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "nuxt": "^3.13.0",
+    "typescript": "~5.4.5"
+  }
+}

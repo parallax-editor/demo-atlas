@@ -1,0 +1,375 @@
+{
+  "schemaVersion": "1.1",
+  "meta": {
+    "title": "Marea — un descenso al abismo",
+    "description": "Mundo demo: océano en capas con parallax de scroll, medusa luminosa y burbujas.",
+    "ogImage": "images/og-image.png",
+    "fonts": [
+      {
+        "family": "Cormorant Garamond",
+        "source": "google"
+      },
+      {
+        "family": "Inter",
+        "source": "google"
+      }
+    ],
+    "transition": {
+      "in": "crossfade-blur",
+      "out": "crossfade-blur",
+      "duration": 700
+    },
+    "lang": "es"
+  },
+  "theme": {
+    "colors": {
+      "ink": "#dff6ff",
+      "paper": "#03121f",
+      "accent": "#6be3ff"
+    },
+    "typography": {
+      "display": "Cormorant Garamond",
+      "body": "Inter"
+    }
+  },
+  "sections": [
+    {
+      "id": "superficie",
+      "height": "130vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #0a3d51 0%, #06263a 60%, #03121f 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-titulo-marea",
+          "depth": -0.1,
+          "elements": [
+            {
+              "type": "text",
+              "id": "titulo-marea",
+              "content": "Marea",
+              "semanticTag": "h1",
+              "position": {
+                "x": 50,
+                "y": 26
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(56px, 9.5vw, 140px)",
+              "fontWeight": 500,
+              "color": "#dff6ff",
+              "letterSpacing": "0.24em",
+              "textAlign": "center",
+              "splitMode": "chars",
+              "staggerDelay": 60,
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "sub-marea",
+              "content": "desliza para hundirte",
+              "semanticTag": "p",
+              "position": {
+                "x": 50,
+                "y": 37
+              },
+              "fontSize": "clamp(13px, 1.4vw, 18px)",
+              "color": "#8fd0e8",
+              "letterSpacing": "0.22em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 600
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-ola-fondo",
+          "depth": -0.4,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "ola-fondo",
+              "src": "images/ola-fondo.png",
+              "alt": "Ola lejana",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -22,
+                  "to": 22,
+                  "duration": 9000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-ola-media",
+          "depth": -0.15,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "ola-media",
+              "src": "images/ola-media.png",
+              "alt": "Ola media",
+              "position": {
+                "x": 50,
+                "y": 60
+              },
+              "size": {
+                "width": 124,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": 26,
+                  "to": -26,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-ola-frente",
+          "depth": 0.25,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "ola-frente",
+              "src": "images/ola-frente.png",
+              "alt": "Ola cercana con espuma",
+              "position": {
+                "x": 50,
+                "y": 71
+              },
+              "size": {
+                "width": 130,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -30,
+                  "to": 30,
+                  "duration": 5600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abismo",
+      "height": "160vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #03121f 0%, #020b14 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-burbujas",
+          "depth": -0.6,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "burbujas",
+              "src": "images/burbujas.png",
+              "alt": "Burbujas ascendiendo",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 70,
+                "height": "auto"
+              },
+              "opacity": 0.8,
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": 60,
+                  "to": -120,
+                  "range": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-medusa",
+          "depth": 0.1,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "medusa",
+              "src": "images/medusa.png",
+              "alt": "Medusa rosa luminosa",
+              "position": {
+                "x": 50,
+                "y": 42
+              },
+              "size": {
+                "width": 26,
+                "height": "auto"
+              },
+              "mobile": {
+                "size": {
+                  "width": 58
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -30,
+                  "duration": 6400,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -5,
+                  "to": 5,
+                  "duration": 8200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "enter",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 1600,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-texto-abismo",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "texto-abismo",
+              "content": "En el abismo, cada capa se mueve\na su propia velocidad.",
+              "position": {
+                "x": 50,
+                "y": 72
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(20px, 2.6vw, 34px)",
+              "fontWeight": 400,
+              "color": "#bfe9f7",
+              "lineHeight": "1.7",
+              "letterSpacing": "0.06em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1100
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 30,
+                  "to": 0,
+                  "duration": 1100,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "volver-atlas",
+              "content": "← volver al Atlas",
+              "semanticTag": "span",
+              "position": {
+                "x": 50,
+                "y": 90
+              },
+              "fontSize": "14px",
+              "color": "#6be3ff",
+              "letterSpacing": "0.2em",
+              "textAlign": "center",
+              "interactive": true,
+              "link": {
+                "site": "home",
+                "ariaLabel": "Volver al Atlas"
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "hover",
+                  "from": 1,
+                  "to": 1.1,
+                  "duration": 250
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

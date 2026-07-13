@@ -1,0 +1,709 @@
+{
+  "schemaVersion": "1.1",
+  "meta": {
+    "title": "Atlas — mundos con profundidad",
+    "description": "Portafolio demo del preset linked-home de Parallax Engine: un home editable que enlaza mundos con cross-fade.",
+    "ogImage": "images/og-image.png",
+    "fonts": [
+      {
+        "family": "Cormorant Garamond",
+        "source": "google"
+      },
+      {
+        "family": "Inter",
+        "source": "google"
+      }
+    ],
+    "transition": {
+      "in": "crossfade-blur",
+      "out": "crossfade-blur",
+      "duration": 700
+    },
+    "lang": "es"
+  },
+  "theme": {
+    "colors": {
+      "ink": "#eef2ff",
+      "paper": "#05070f",
+      "accent": "#7ee8fa"
+    },
+    "typography": {
+      "display": "Cormorant Garamond",
+      "body": "Inter"
+    }
+  },
+  "sections": [
+    {
+      "id": "hero-noche",
+      "height": "160vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #05070f 0%, #0b1026 55%, #101830 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-estrellas",
+          "depth": -0.9,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "estrellas",
+              "src": "images/estrellas.png",
+              "alt": "Cielo estrellado",
+              "position": {
+                "x": 50,
+                "y": 30
+              },
+              "size": {
+                "width": 115,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1600,
+                  "easing": "easeOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-aurora",
+          "depth": -0.75,
+          "parallaxMode": [
+            "scroll-vertical",
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "aurora",
+              "src": "images/aurora.png",
+              "alt": "Aurora boreal verde y violeta",
+              "position": {
+                "x": 50,
+                "y": 20
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.55,
+                  "to": 1,
+                  "duration": 5200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "mouse",
+                  "from": -14,
+                  "to": 14
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-luna",
+          "depth": -0.5,
+          "parallaxMode": [
+            "scroll-vertical",
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "luna",
+              "src": "images/luna.png",
+              "alt": "Luna llena con halo",
+              "position": {
+                "x": 72,
+                "y": 22
+              },
+              "size": {
+                "width": 16,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 70,
+                  "y": 14
+                },
+                "size": {
+                  "width": 34
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -14,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "enter",
+                  "from": 0.85,
+                  "to": 1,
+                  "duration": 1400,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-montanas-fondo",
+          "depth": -0.35,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "montanas-fondo",
+              "src": "images/montanas-fondo.png",
+              "alt": "Cordillera lejana",
+              "position": {
+                "x": 50,
+                "y": 62
+              },
+              "size": {
+                "width": 118,
+                "height": "auto"
+              },
+              "anchor": "bottom"
+            }
+          ]
+        },
+        {
+          "id": "capa-montanas-medio",
+          "depth": -0.12,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "montanas-medio",
+              "src": "images/montanas-medio.png",
+              "alt": "Cordillera media",
+              "position": {
+                "x": 50,
+                "y": 78
+              },
+              "size": {
+                "width": 122,
+                "height": "auto"
+              },
+              "anchor": "bottom"
+            }
+          ]
+        },
+        {
+          "id": "capa-texto-hero",
+          "depth": 0.05,
+          "elements": [
+            {
+              "type": "text",
+              "id": "titulo-atlas",
+              "content": "Atlas",
+              "semanticTag": "h1",
+              "position": {
+                "x": 50,
+                "y": 34
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(64px, 11vw, 168px)",
+              "fontWeight": 500,
+              "color": "#eef2ff",
+              "letterSpacing": "0.22em",
+              "textAlign": "center",
+              "splitMode": "chars",
+              "staggerDelay": 70,
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "easing": "easeOut"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "subtitulo-atlas",
+              "content": "Mundos con profundidad real,\nescritos en un solo site.json",
+              "semanticTag": "p",
+              "position": {
+                "x": 50,
+                "y": 44
+              },
+              "fontSize": "clamp(15px, 1.6vw, 22px)",
+              "fontWeight": 300,
+              "color": "#b8c6e6",
+              "letterSpacing": "0.08em",
+              "lineHeight": "1.7",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 700,
+                  "easing": "easeOut"
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 24,
+                  "to": 0,
+                  "duration": 900,
+                  "delay": 700,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "hint-scroll",
+              "content": "▾ desliza",
+              "semanticTag": "span",
+              "position": {
+                "x": 50,
+                "y": 53
+              },
+              "fontSize": "13px",
+              "color": "#7ee8fa",
+              "letterSpacing": "0.3em",
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": 10,
+                  "duration": 1600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 800,
+                  "delay": 1600
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-montanas-frente",
+          "depth": 0.3,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "montanas-frente",
+              "src": "images/montanas-frente.png",
+              "alt": "Cordillera cercana",
+              "position": {
+                "x": 50,
+                "y": 96
+              },
+              "size": {
+                "width": 128,
+                "height": "auto"
+              },
+              "anchor": "bottom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "puertas",
+      "height": "120vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #101830 0%, #071522 60%, #03121f 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-titulo-puertas",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "titulo-puertas",
+              "content": "Cruza a otro mundo",
+              "semanticTag": "h2",
+              "position": {
+                "x": 50,
+                "y": 16
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(30px, 4.6vw, 58px)",
+              "fontWeight": 500,
+              "color": "#eef2ff",
+              "letterSpacing": "0.1em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 800
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "sub-puertas",
+              "content": "Cada tarjeta es un link.site: navegación in-engine con cross-fade, sin recargar.",
+              "position": {
+                "x": 50,
+                "y": 23
+              },
+              "fontSize": "clamp(13px, 1.3vw, 17px)",
+              "color": "#7f95bd",
+              "textAlign": "center",
+              "lineHeight": "1.6",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 800,
+                  "delay": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-puerta-marea",
+          "depth": 0.08,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "puerta-marea-img",
+              "src": "images/medusa.png",
+              "alt": "Medusa rosa luminosa — mundo Marea",
+              "position": {
+                "x": 30,
+                "y": 52
+              },
+              "size": {
+                "width": 20,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 42
+                },
+                "size": {
+                  "width": 46
+                }
+              },
+              "interactive": true,
+              "link": {
+                "site": "marea",
+                "ariaLabel": "Entrar al mundo Marea"
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -18,
+                  "duration": 5200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "hover",
+                  "from": 1,
+                  "to": 1.09,
+                  "duration": 300,
+                  "easing": "easeOut"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "puerta-marea-titulo",
+              "content": "Marea",
+              "semanticTag": "h3",
+              "position": {
+                "x": 30,
+                "y": 72
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(26px, 3vw, 40px)",
+              "fontWeight": 500,
+              "color": "#6be3ff",
+              "letterSpacing": "0.18em",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 56
+                }
+              },
+              "interactive": true,
+              "link": {
+                "site": "marea",
+                "ariaLabel": "Entrar al mundo Marea"
+              }
+            },
+            {
+              "type": "text",
+              "id": "puerta-marea-sub",
+              "content": "un descenso al abismo",
+              "semanticTag": "span",
+              "position": {
+                "x": 30,
+                "y": 77
+              },
+              "fontSize": "13px",
+              "color": "#5f7ba6",
+              "letterSpacing": "0.14em",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 60
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "capa-puerta-brasa",
+          "depth": 0.08,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "puerta-brasa-img",
+              "src": "images/sol.png",
+              "alt": "Sol ardiente — mundo Brasa",
+              "position": {
+                "x": 70,
+                "y": 52
+              },
+              "size": {
+                "width": 19,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 76
+                },
+                "size": {
+                  "width": 44
+                }
+              },
+              "interactive": true,
+              "link": {
+                "site": "brasa",
+                "ariaLabel": "Entrar al mundo Brasa"
+              },
+              "animations": [
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -4,
+                  "to": 4,
+                  "duration": 9000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "hover",
+                  "from": 1,
+                  "to": 1.09,
+                  "duration": 300,
+                  "easing": "easeOut"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "puerta-brasa-titulo",
+              "content": "Brasa",
+              "semanticTag": "h3",
+              "position": {
+                "x": 70,
+                "y": 72
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(26px, 3vw, 40px)",
+              "fontWeight": 500,
+              "color": "#f7b267",
+              "letterSpacing": "0.18em",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 90
+                }
+              },
+              "interactive": true,
+              "link": {
+                "site": "brasa",
+                "ariaLabel": "Entrar al mundo Brasa"
+              }
+            },
+            {
+              "type": "text",
+              "id": "puerta-brasa-sub",
+              "content": "el desierto que respira",
+              "semanticTag": "span",
+              "position": {
+                "x": 70,
+                "y": 77
+              },
+              "fontSize": "13px",
+              "color": "#a06a52",
+              "letterSpacing": "0.14em",
+              "textAlign": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 94
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colofon",
+      "height": "70vh",
+      "background": {
+        "type": "color",
+        "value": "#03121f"
+      },
+      "layers": [
+        {
+          "id": "capa-colofon",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "colofon-titulo",
+              "content": "Hecho con Parallax Engine",
+              "position": {
+                "x": 50,
+                "y": 40
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(22px, 2.6vw, 34px)",
+              "fontWeight": 500,
+              "color": "#eef2ff",
+              "letterSpacing": "0.12em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "colofon-sub",
+              "content": "Todo lo que ves — capas, parallax, animaciones y navegación —\nvive en archivos site.json editables visualmente.",
+              "position": {
+                "x": 50,
+                "y": 52
+              },
+              "fontSize": "clamp(13px, 1.3vw, 16px)",
+              "color": "#7f95bd",
+              "lineHeight": "1.8",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 250
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "colofon-link",
+              "content": "→ conoce el motor",
+              "semanticTag": "span",
+              "position": {
+                "x": 50,
+                "y": 66
+              },
+              "fontSize": "14px",
+              "color": "#7ee8fa",
+              "letterSpacing": "0.2em",
+              "textAlign": "center",
+              "interactive": true,
+              "link": {
+                "href": "https://github.com/parallax-editor/parallax-engine",
+                "target": "_blank",
+                "ariaLabel": "Repositorio de Parallax Engine"
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "hover",
+                  "from": 1,
+                  "to": 1.08,
+                  "duration": 250
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "schemaVersion": "1.1",
+  "meta": {
+    "title": "Brasa — el desierto que respira",
+    "description": "Mundo demo: dunas en capas, sol que asciende con el scroll y calor que vibra.",
+    "ogImage": "images/og-image.png",
+    "fonts": [
+      {
+        "family": "Cormorant Garamond",
+        "source": "google"
+      },
+      {
+        "family": "Inter",
+        "source": "google"
+      }
+    ],
+    "transition": {
+      "in": "crossfade-blur",
+      "out": "crossfade-blur",
+      "duration": 700
+    },
+    "lang": "es"
+  },
+  "theme": {
+    "colors": {
+      "ink": "#2b0f2e",
+      "paper": "#f7b267",
+      "accent": "#b23a48"
+    },
+    "typography": {
+      "display": "Cormorant Garamond",
+      "body": "Inter"
+    }
+  },
+  "sections": [
+    {
+      "id": "amanecer",
+      "height": "170vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #2b0f2e 0%, #7a2c3f 45%, #f4845f 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-sol",
+          "depth": -0.55,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "sol",
+              "src": "images/sol.png",
+              "alt": "Sol ardiente",
+              "position": {
+                "x": 50,
+                "y": 40
+              },
+              "size": {
+                "width": 30,
+                "height": "auto"
+              },
+              "mobile": {
+                "size": {
+                  "width": 62
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": 120,
+                  "to": -160,
+                  "range": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.05,
+                  "duration": 4200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-titulo-brasa",
+          "depth": -0.05,
+          "elements": [
+            {
+              "type": "text",
+              "id": "titulo-brasa",
+              "content": "Brasa",
+              "semanticTag": "h1",
+              "position": {
+                "x": 50,
+                "y": 24
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(56px, 9.5vw, 140px)",
+              "fontWeight": 500,
+              "color": "#ffe9d6",
+              "letterSpacing": "0.24em",
+              "textAlign": "center",
+              "splitMode": "chars",
+              "staggerDelay": 60,
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "sub-brasa",
+              "content": "el sol sube contigo",
+              "semanticTag": "p",
+              "position": {
+                "x": 50,
+                "y": 34
+              },
+              "fontSize": "clamp(13px, 1.4vw, 18px)",
+              "color": "#ffd7b8",
+              "letterSpacing": "0.22em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 600
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-duna-fondo",
+          "depth": -0.3,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "duna-fondo",
+              "src": "images/duna-fondo.png",
+              "alt": "Duna lejana",
+              "position": {
+                "x": 50,
+                "y": 52
+              },
+              "size": {
+                "width": 118,
+                "height": "auto"
+              }
+            }
+          ]
+        },
+        {
+          "id": "capa-duna-media",
+          "depth": -0.1,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "duna-media",
+              "src": "images/duna-media.png",
+              "alt": "Duna media",
+              "position": {
+                "x": 50,
+                "y": 62
+              },
+              "size": {
+                "width": 124,
+                "height": "auto"
+              }
+            }
+          ]
+        },
+        {
+          "id": "capa-duna-frente",
+          "depth": 0.28,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "duna-frente",
+              "src": "images/duna-frente.png",
+              "alt": "Duna cercana",
+              "position": {
+                "x": 50,
+                "y": 74
+              },
+              "size": {
+                "width": 132,
+                "height": "auto"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calor",
+      "height": "120vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #f4845f 0%, #f7b267 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-texto-calor",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "texto-calor",
+              "content": "El mismo motor, otra paleta:\nun site.json distinto lo cambia todo.",
+              "position": {
+                "x": 50,
+                "y": 40
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(22px, 3vw, 40px)",
+              "fontWeight": 500,
+              "color": "#4a1420",
+              "lineHeight": "1.6",
+              "letterSpacing": "0.04em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1000
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 34,
+                  "to": 0,
+                  "duration": 1000,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "volver-atlas",
+              "content": "← volver al Atlas",
+              "semanticTag": "span",
+              "position": {
+                "x": 50,
+                "y": 62
+              },
+              "fontSize": "14px",
+              "color": "#7a1f2d",
+              "letterSpacing": "0.2em",
+              "textAlign": "center",
+              "interactive": true,
+              "link": {
+                "site": "home",
+                "ariaLabel": "Volver al Atlas"
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "hover",
+                  "from": 1,
+                  "to": 1.1,
+                  "duration": 250
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
