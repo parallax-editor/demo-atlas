@@ -203,8 +203,150 @@
       ]
     },
     {
+      "id": "banco",
+      "height": "150vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #03121f 0%, #041b2c 50%, #03121f 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-peces-lejanos",
+          "depth": -0.55,
+          "blur": 2.5,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "peces-dorados",
+              "src": "images/peces-dorados.png",
+              "alt": "Banco de peces dorados a lo lejos",
+              "position": {
+                "x": 50,
+                "y": 34
+              },
+              "size": {
+                "width": 74,
+                "height": "auto"
+              },
+              "opacity": 0.55,
+              "flipX": true,
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "scroll",
+                  "from": 120,
+                  "to": -160,
+                  "range": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-peces-cerca",
+          "depth": 0.1,
+          "parallaxMode": [
+            "scroll-vertical",
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "peces-azules",
+              "src": "images/peces-azules.png",
+              "alt": "Banco de peces azules",
+              "position": {
+                "x": 50,
+                "y": 56
+              },
+              "size": {
+                "width": 86,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "scroll",
+                  "from": -180,
+                  "to": 200,
+                  "range": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -16,
+                  "duration": 4200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-banco-texto",
+          "depth": -0.05,
+          "elements": [
+            {
+              "type": "text",
+              "id": "banco-texto",
+              "content": "Los bancos de peces cruzan\nal ritmo de tu scroll —\ncada cardumen a su velocidad.",
+              "semanticTag": "h2",
+              "position": {
+                "x": 26,
+                "y": 46
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(24px, 3.2vw, 46px)",
+              "fontWeight": 400,
+              "color": "#bfe9f7",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.04em",
+              "textAlign": "left",
+              "splitMode": "lines",
+              "staggerDelay": 260,
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 26
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1100
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 34,
+                  "to": 0,
+                  "duration": 1100,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "abismo",
-      "height": "160vh",
+      "height": "240vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #03121f 0%, #020b14 100%)"
@@ -297,10 +439,31 @@
                   "to": 1,
                   "duration": 1600,
                   "easing": "easeOutCubic"
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": 80,
+                  "to": -120,
+                  "range": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "type": "scale",
+                  "trigger": "scroll",
+                  "from": 0.8,
+                  "to": 1.25,
+                  "range": [
+                    0,
+                    1
+                  ]
                 }
               ]
             }
-          ]
+          ],
+          "blendMode": "screen"
         },
         {
           "id": "capa-texto-abismo",
@@ -324,18 +487,134 @@
               "animations": [
                 {
                   "type": "fadeIn",
-                  "trigger": "enter",
+                  "trigger": "scroll",
                   "from": 0,
                   "to": 1,
-                  "duration": 1100
+                  "range": [
+                    0.3,
+                    0.6
+                  ]
                 },
                 {
                   "type": "translateY",
-                  "trigger": "enter",
-                  "from": 30,
+                  "trigger": "scroll",
+                  "from": 60,
                   "to": 0,
-                  "duration": 1100,
-                  "easing": "easeOutCubic"
+                  "range": [
+                    0.3,
+                    0.65
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "scrollBehavior": "pinned"
+    },
+    {
+      "id": "fosa",
+      "height": "130vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #020b14 0%, #010507 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-burbujas-fosa",
+          "depth": -0.4,
+          "blendMode": "screen",
+          "elements": [
+            {
+              "type": "png",
+              "id": "burbujas-fosa",
+              "src": "images/burbujas.png",
+              "alt": "Burbujas en la fosa",
+              "position": {
+                "x": 78,
+                "y": 46
+              },
+              "size": {
+                "width": 34,
+                "height": "auto"
+              },
+              "opacity": 0.5,
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": 90,
+                  "to": -140,
+                  "range": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-algas",
+          "depth": 0.2,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "algas",
+              "src": "images/algas.png",
+              "alt": "Algas meciéndose",
+              "position": {
+                "x": 50,
+                "y": 86
+              },
+              "size": {
+                "width": 112,
+                "height": "auto"
+              },
+              "anchor": "bottom",
+              "animations": [
+                {
+                  "type": "skew",
+                  "trigger": "loop",
+                  "from": -3,
+                  "to": 3,
+                  "duration": 5200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-fosa-texto",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "fosa-texto",
+              "content": "Fin del descenso.",
+              "semanticTag": "h2",
+              "position": {
+                "x": 50,
+                "y": 38
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(26px, 3.4vw, 48px)",
+              "fontWeight": 500,
+              "color": "#dff6ff",
+              "letterSpacing": "0.14em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1200
                 }
               ]
             },
@@ -346,7 +625,7 @@
               "semanticTag": "span",
               "position": {
                 "x": 50,
-                "y": 90
+                "y": 50
               },
               "fontSize": "14px",
               "color": "#6be3ff",
@@ -362,7 +641,7 @@
                   "type": "scale",
                   "trigger": "hover",
                   "from": 1,
-                  "to": 1.1,
+                  "to": 1.12,
                   "duration": 250
                 }
               ]
@@ -371,5 +650,12 @@
         }
       ]
     }
-  ]
+  ],
+  "cursor": {
+    "enabled": true,
+    "color": "#6be3ff",
+    "size": 20,
+    "hoverScale": 2.2,
+    "blendMode": "screen"
+  }
 }

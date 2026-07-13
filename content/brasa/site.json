@@ -215,6 +215,297 @@
               }
             }
           ]
+        },
+        {
+          "id": "capa-calor",
+          "depth": 0.15,
+          "blendMode": "screen",
+          "blur": 1.5,
+          "elements": [
+            {
+              "type": "png",
+              "id": "calor",
+              "src": "images/calor.png",
+              "alt": "Vibración de calor",
+              "position": {
+                "x": 50,
+                "y": 80
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "opacity": 0.8,
+              "animations": [
+                {
+                  "type": "skew",
+                  "trigger": "loop",
+                  "from": -2,
+                  "to": 2,
+                  "duration": 2600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -18,
+                  "duration": 3400,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cielo",
+      "height": "140vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #f4845f 0%, #f9c58d 55%, #f7b267 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-nubes",
+          "depth": -0.5,
+          "blur": 2,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "nubes-rosa",
+              "src": "images/nubes-rosa.png",
+              "alt": "Nubes rosadas",
+              "position": {
+                "x": 50,
+                "y": 30
+              },
+              "size": {
+                "width": 118,
+                "height": "auto"
+              },
+              "opacity": 0.85,
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -34,
+                  "to": 34,
+                  "duration": 16000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-aves",
+          "depth": 0.05,
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "aves",
+              "src": "images/aves.png",
+              "alt": "Aves cruzando el cielo",
+              "position": {
+                "x": 50,
+                "y": 40
+              },
+              "size": {
+                "width": 62,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "scroll",
+                  "from": -220,
+                  "to": 240,
+                  "range": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -12,
+                  "duration": 2800,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-cielo-texto",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "cielo-texto",
+              "content": "Hasta las aves migran\ncon tu scroll.",
+              "semanticTag": "h2",
+              "position": {
+                "x": 70,
+                "y": 62
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(26px, 3.6vw, 52px)",
+              "fontWeight": 500,
+              "color": "#4a1420",
+              "lineHeight": "1.4",
+              "letterSpacing": "0.04em",
+              "textAlign": "right",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 70
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1000
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 30,
+                  "to": 0,
+                  "duration": 1000,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noche-desierto",
+      "height": "220vh",
+      "scrollBehavior": "pinned",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #2b0f2e 0%, #150a1e 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-noche-estrellas",
+          "depth": -0.6,
+          "elements": [
+            {
+              "type": "png",
+              "id": "estrellas-desierto",
+              "src": "images/estrellas.png",
+              "alt": "Estrellas del desierto",
+              "position": {
+                "x": 50,
+                "y": 36
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0.05,
+                    0.5
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-noche-dunas",
+          "depth": 0.1,
+          "elements": [
+            {
+              "type": "png",
+              "id": "dunas-noche",
+              "src": "images/duna-fondo.png",
+              "alt": "Dunas de noche",
+              "position": {
+                "x": 50,
+                "y": 84
+              },
+              "size": {
+                "width": 126,
+                "height": "auto"
+              },
+              "opacity": 0.55
+            }
+          ]
+        },
+        {
+          "id": "capa-noche-texto",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "noche-titulo",
+              "content": "Y cuando el sol se va,\nel desierto enciende sus estrellas.",
+              "semanticTag": "h2",
+              "position": {
+                "x": 50,
+                "y": 44
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(26px, 3.8vw, 54px)",
+              "fontWeight": 500,
+              "color": "#ffe9d6",
+              "lineHeight": "1.5",
+              "letterSpacing": "0.05em",
+              "textAlign": "center",
+              "splitMode": "words",
+              "staggerDelay": 120,
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0.25,
+                    0.55
+                  ]
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "scroll",
+                  "from": 50,
+                  "to": 0,
+                  "range": [
+                    0.25,
+                    0.6
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -295,5 +586,12 @@
         }
       ]
     }
-  ]
+  ],
+  "cursor": {
+    "enabled": true,
+    "color": "#ffd166",
+    "size": 20,
+    "hoverScale": 2.2,
+    "blendMode": "difference"
+  }
 }

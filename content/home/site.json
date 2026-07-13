@@ -116,6 +116,47 @@
           ]
         },
         {
+          "id": "capa-fugaz",
+          "depth": -0.6,
+          "elements": [
+            {
+              "type": "png",
+              "id": "estrella-fugaz",
+              "src": "images/estrella-fugaz.png",
+              "alt": "Estrella fugaz",
+              "position": {
+                "x": 30,
+                "y": 12
+              },
+              "size": {
+                "width": 24,
+                "height": "auto"
+              },
+              "opacity": 0.9,
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -80,
+                  "to": 160,
+                  "duration": 7000,
+                  "easing": "easeInQuart",
+                  "loop": true
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 3500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "capa-luna",
           "depth": -0.5,
           "parallaxMode": [
@@ -344,6 +385,206 @@
       ]
     },
     {
+      "id": "manifiesto",
+      "height": "220vh",
+      "scrollBehavior": "pinned",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #101830 0%, #0d1428 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-const-estrellas",
+          "depth": -0.7,
+          "blur": 1,
+          "elements": [
+            {
+              "type": "png",
+              "id": "estrellas-manifiesto",
+              "src": "images/estrellas.png",
+              "alt": "Estrellas",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "opacity": 0.55
+            }
+          ]
+        },
+        {
+          "id": "capa-constelacion",
+          "depth": -0.2,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "constelacion",
+              "src": "images/constelacion.png",
+              "alt": "Constelación dibujándose",
+              "position": {
+                "x": 74,
+                "y": 46
+              },
+              "size": {
+                "width": 30,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 26
+                },
+                "size": {
+                  "width": 64
+                }
+              },
+              "animations": [
+                {
+                  "type": "clipPath",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 100,
+                  "range": [
+                    0.05,
+                    0.6
+                  ]
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "mouse",
+                  "from": -3,
+                  "to": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-manifiesto-texto",
+          "depth": 0,
+          "elements": [
+            {
+              "type": "text",
+              "id": "manifiesto-kicker",
+              "content": "MANIFIESTO",
+              "semanticTag": "p",
+              "position": {
+                "x": 28,
+                "y": 22
+              },
+              "fontSize": "12px",
+              "fontWeight": 600,
+              "color": "#7ee8fa",
+              "letterSpacing": "0.5em",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 52
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0,
+                    0.2
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "manifiesto-texto",
+              "content": "La pantalla no es\nuna página.\nEs una ventana.",
+              "semanticTag": "h2",
+              "position": {
+                "x": 28,
+                "y": 40
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(34px, 5vw, 72px)",
+              "fontWeight": 500,
+              "color": "#eef2ff",
+              "lineHeight": "1.25",
+              "letterSpacing": "0.04em",
+              "textAlign": "left",
+              "splitMode": "lines",
+              "staggerDelay": 350,
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 66
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1200,
+                  "easing": "easeOut"
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "enter",
+                  "from": 40,
+                  "to": 0,
+                  "duration": 1200,
+                  "easing": "easeOutCubic"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "manifiesto-nota",
+              "content": "Mientras lees esto, la sección está clavada al viewport\ny la constelación se dibuja con tu scroll.",
+              "semanticTag": "p",
+              "position": {
+                "x": 28,
+                "y": 66
+              },
+              "fontSize": "clamp(12px, 1.2vw, 15px)",
+              "color": "#7f95bd",
+              "lineHeight": "1.8",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 82
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "scroll",
+                  "from": 0,
+                  "to": 1,
+                  "range": [
+                    0.25,
+                    0.5
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "puertas",
       "height": "120vh",
       "background": {
@@ -484,7 +725,19 @@
               "link": {
                 "site": "marea",
                 "ariaLabel": "Entrar al mundo Marea"
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "depends",
+                  "dependsOn": "puerta-marea-img",
+                  "dependsEvent": "hover",
+                  "from": 1,
+                  "to": 1.15,
+                  "duration": 300,
+                  "easing": "easeOut"
+                }
+              ]
             },
             {
               "type": "text",
@@ -587,7 +840,19 @@
               "link": {
                 "site": "brasa",
                 "ariaLabel": "Entrar al mundo Brasa"
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "depends",
+                  "dependsOn": "puerta-brasa-img",
+                  "dependsEvent": "hover",
+                  "from": 1,
+                  "to": 1.15,
+                  "duration": 300,
+                  "easing": "easeOut"
+                }
+              ]
             },
             {
               "type": "text",
@@ -608,6 +873,205 @@
                   "y": 94
                 }
               }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "profundidad",
+      "height": "130vh",
+      "background": {
+        "type": "gradient",
+        "value": "linear-gradient(180deg, #03121f 0%, #071726 100%)"
+      },
+      "layers": [
+        {
+          "id": "capa-3d-fondo",
+          "depth": -0.5,
+          "blur": 3,
+          "perspective3d": true,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "montanas-3d-fondo",
+              "src": "images/montanas-fondo.png",
+              "alt": "Cordillera difusa",
+              "position": {
+                "x": 50,
+                "y": 62
+              },
+              "size": {
+                "width": 115,
+                "height": "auto"
+              },
+              "opacity": 0.55,
+              "animations": [
+                {
+                  "type": "rotateY",
+                  "trigger": "mouse",
+                  "from": -7,
+                  "to": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-3d-luna",
+          "depth": -0.2,
+          "perspective3d": true,
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "luna-3d",
+              "src": "images/luna.png",
+              "alt": "Luna en 3D",
+              "position": {
+                "x": 68,
+                "y": 34
+              },
+              "size": {
+                "width": 15,
+                "height": "auto"
+              },
+              "mobile": {
+                "position": {
+                  "x": 70,
+                  "y": 22
+                },
+                "size": {
+                  "width": 32
+                }
+              },
+              "animations": [
+                {
+                  "type": "rotateY",
+                  "trigger": "mouse",
+                  "from": -16,
+                  "to": 16
+                },
+                {
+                  "type": "rotateX",
+                  "trigger": "mouse",
+                  "from": 8,
+                  "to": -8
+                },
+                {
+                  "type": "rotateY",
+                  "trigger": "gyroscope",
+                  "from": -14,
+                  "to": 14
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-3d-frente",
+          "depth": 0.25,
+          "perspective3d": true,
+          "parallaxMode": [
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "montanas-3d-frente",
+              "src": "images/montanas-frente.png",
+              "alt": "Cordillera en primer plano",
+              "position": {
+                "x": 50,
+                "y": 92
+              },
+              "size": {
+                "width": 125,
+                "height": "auto"
+              },
+              "animations": [
+                {
+                  "type": "rotateY",
+                  "trigger": "mouse",
+                  "from": 5,
+                  "to": -5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "capa-3d-texto",
+          "depth": 0.05,
+          "elements": [
+            {
+              "type": "text",
+              "id": "profundidad-titulo",
+              "content": "Muévete. La escena responde.",
+              "semanticTag": "h2",
+              "position": {
+                "x": 32,
+                "y": 42
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(28px, 3.6vw, 52px)",
+              "fontWeight": 500,
+              "color": "#eef2ff",
+              "letterSpacing": "0.06em",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 48
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "profundidad-sub",
+              "content": "Perspectiva 3D real: el mouse (o el giroscopio del teléfono)\ninclina cada capa a su propia profundidad.",
+              "semanticTag": "p",
+              "position": {
+                "x": 32,
+                "y": 53
+              },
+              "fontSize": "clamp(13px, 1.3vw, 16px)",
+              "color": "#7f95bd",
+              "lineHeight": "1.8",
+              "textAlign": "left",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 58
+                },
+                "textAlign": "center"
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 350
+                }
+              ]
             }
           ]
         }
@@ -705,5 +1169,12 @@
         }
       ]
     }
-  ]
+  ],
+  "cursor": {
+    "enabled": true,
+    "color": "#7ee8fa",
+    "size": 18,
+    "hoverScale": 2.4,
+    "blendMode": "difference"
+  }
 }
