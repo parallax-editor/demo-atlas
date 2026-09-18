@@ -429,7 +429,7 @@
                 "x": 50,
                 "y": 50
               },
-              "fontSize": "clamp(13px, 1.4vw, 18px)",
+              "fontSize": "clamp(16px, 1.4vw, 18px)",
               "color": "#8fd0e8",
               "letterSpacing": "0.22em",
               "textAlign": "center",
@@ -450,7 +450,7 @@
     },
     {
       "id": "banco",
-      "height": "150vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #03121f 0%, #041b2c 50%, #03121f 100%)"
@@ -469,16 +469,16 @@
                 "y": 50
               },
               "size": {
-                "width": 124,
+                "width": 120,
                 "height": "auto"
               },
               "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 380
+                  "width": 370
                 }
               },
-              "opacity": 0.9
+              "opacity": 0.95
             }
           ]
         },
@@ -504,10 +504,10 @@
                   "width": 370
                 }
               },
-              "opacity": 0.6
+              "opacity": 0.7
             }
           ],
-          "blur": 3
+          "blur": 2
         },
         {
           "id": "l-b-ast",
@@ -602,7 +602,7 @@
     },
     {
       "id": "abismo",
-      "height": "140vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #03121f 0%, #020b14 100%)"
@@ -621,16 +621,16 @@
                 "y": 50
               },
               "size": {
-                "width": 124,
+                "width": 120,
                 "height": "auto"
               },
               "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 380
+                  "width": 370
                 }
               },
-              "opacity": 0.9
+              "opacity": 0.95
             }
           ]
         },
@@ -656,10 +656,10 @@
                   "width": 380
                 }
               },
-              "opacity": 0.8
+              "opacity": 0.85
             }
           ],
-          "blur": 2
+          "blur": 1
         },
         {
           "id": "l-a-planet",
@@ -682,7 +682,18 @@
                 "size": {
                   "width": 340
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": 4,
+                  "duration": 60000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -738,7 +749,7 @@
     },
     {
       "id": "fosa",
-      "height": "130vh",
+      "height": "82vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #020b14 0%, #010507 100%)"
@@ -757,18 +768,45 @@
                 "y": 50
               },
               "size": {
-                "width": 124,
+                "width": 120,
                 "height": "auto"
               },
               "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 380
+                  "width": 370
                 }
               },
-              "opacity": 0.7
+              "opacity": 0.9
             }
           ]
+        },
+        {
+          "id": "l-f-neb",
+          "depth": -0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "f-neb",
+              "src": "images/nebula.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 122,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "opacity": 0.6
+            }
+          ],
+          "blur": 2
         },
         {
           "id": "l-f-debris",
@@ -792,7 +830,7 @@
                   "width": 380
                 }
               },
-              "opacity": 0.7,
+              "opacity": 0.8,
               "animations": [
                 {
                   "type": "translateX",
@@ -810,7 +848,7 @@
             "mouse",
             "gyroscope"
           ],
-          "blur": 2
+          "blur": 1
         },
         {
           "id": "capa-fosa-texto",
@@ -850,7 +888,7 @@
                 "x": 50,
                 "y": 50
               },
-              "fontSize": "14px",
+              "fontSize": "15px",
               "color": "#6be3ff",
               "letterSpacing": "0.2em",
               "textAlign": "center",

@@ -403,7 +403,7 @@
                 "x": 50,
                 "y": 50
               },
-              "fontSize": "clamp(13px, 1.4vw, 18px)",
+              "fontSize": "clamp(16px, 1.4vw, 18px)",
               "color": "#ffd7b8",
               "letterSpacing": "0.22em",
               "textAlign": "center",
@@ -424,45 +424,79 @@
     },
     {
       "id": "cielo",
-      "height": "140vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #f4845f 0%, #f9c58d 55%, #f7b267 100%)"
+        "value": "linear-gradient(180deg,#c98a4a 0%,#b5703a 55%,#7a4a2a 100%)"
       },
       "layers": [
         {
-          "id": "l-ci-sky",
-          "depth": -0.7,
+          "id": "l-c-canyon-far",
+          "depth": -0.4,
           "elements": [
             {
               "type": "png",
-              "id": "ci-sky",
-              "src": "images/sky-sunset.webp",
+              "id": "c-canyon-far",
+              "src": "images/canyon-far.webp",
               "position": {
                 "x": 50,
                 "y": 50
               },
               "size": {
-                "width": 124,
+                "width": 116,
                 "height": "auto"
               },
               "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 380
+                  "width": 360
                 }
               },
-              "opacity": 0.85
+              "opacity": 0.8
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
-          "id": "l-ci-part",
+          "id": "l-c-canyon-mid",
           "depth": -0.1,
           "elements": [
             {
               "type": "png",
-              "id": "ci-part",
+              "id": "c-canyon-mid",
+              "src": "images/canyon-mid.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 118,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "opacity": 0.5
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-c-part",
+          "depth": 0.15,
+          "elements": [
+            {
+              "type": "png",
+              "id": "c-part",
               "src": "images/particles.webp",
               "position": {
                 "x": 50,
@@ -494,6 +528,30 @@
           "parallaxMode": [
             "mouse",
             "gyroscope"
+          ]
+        },
+        {
+          "id": "l-scrim",
+          "depth": 0.05,
+          "elements": [
+            {
+              "type": "png",
+              "id": "scrim",
+              "src": "images/scrim-warm.svg",
+              "position": {
+                "x": 50,
+                "y": 100
+              },
+              "size": {
+                "width": "102%"
+              },
+              "anchor": "bottom",
+              "mobile": {
+                "size": {
+                  "width": "220"
+                }
+              }
+            }
           ]
         },
         {
@@ -547,47 +605,20 @@
     },
     {
       "id": "noche-desierto",
-      "height": "140vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #2b0f2e 0%, #150a1e 100%)"
+        "value": "linear-gradient(180deg,#3a2a4a 0%,#5a3a3a 60%,#2a1a1a 100%)"
       },
       "layers": [
         {
-          "id": "l-nd-sky",
-          "depth": -0.7,
+          "id": "l-n-canyon",
+          "depth": -0.3,
           "elements": [
             {
               "type": "png",
-              "id": "nd-sky",
-              "src": "images/sky-sunset.webp",
-              "position": {
-                "x": 50,
-                "y": 50
-              },
-              "size": {
-                "width": 122,
-                "height": "auto"
-              },
-              "anchor": "center",
-              "mobile": {
-                "size": {
-                  "width": 380
-                }
-              },
-              "opacity": 0.35
-            }
-          ],
-          "blur": 2
-        },
-        {
-          "id": "l-nd-canyon",
-          "depth": -0.2,
-          "elements": [
-            {
-              "type": "png",
-              "id": "nd-canyon",
-              "src": "images/canyon-far.webp",
+              "id": "n-canyon",
+              "src": "images/canyon-mid.webp",
               "position": {
                 "x": 50,
                 "y": 50
@@ -602,7 +633,65 @@
                   "width": 370
                 }
               },
-              "opacity": 0.7
+              "opacity": 0.6
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-n-trees",
+          "depth": 0.2,
+          "elements": [
+            {
+              "type": "png",
+              "id": "n-trees",
+              "src": "images/trees-near.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "opacity": 0.95
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-scrim",
+          "depth": 0.05,
+          "elements": [
+            {
+              "type": "png",
+              "id": "scrim",
+              "src": "images/scrim-warm.svg",
+              "position": {
+                "x": 50,
+                "y": 100
+              },
+              "size": {
+                "width": "102%"
+              },
+              "anchor": "bottom",
+              "mobile": {
+                "size": {
+                  "width": "220"
+                }
+              }
             }
           ]
         },
@@ -657,38 +746,41 @@
     },
     {
       "id": "calor",
-      "height": "120vh",
+      "height": "72vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #f4845f 0%, #f7b267 100%)"
+        "value": "linear-gradient(180deg,#3d2410 0%,#241206 100%)"
       },
       "layers": [
         {
-          "id": "l-ca-sky",
-          "depth": -0.6,
+          "id": "l-ca-canyon",
+          "depth": -0.3,
           "elements": [
             {
               "type": "png",
-              "id": "ca-sky",
-              "src": "images/sky-sunset.webp",
+              "id": "ca-canyon",
+              "src": "images/canyon-far.webp",
               "position": {
                 "x": 50,
                 "y": 50
               },
               "size": {
-                "width": 124,
+                "width": 116,
                 "height": "auto"
               },
               "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 380
+                  "width": 360
                 }
               },
-              "opacity": 0.3
+              "opacity": 0.5
             }
           ],
-          "blur": 3
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
         },
         {
           "id": "capa-texto-calor",
@@ -736,7 +828,7 @@
                 "x": 50,
                 "y": 62
               },
-              "fontSize": "14px",
+              "fontSize": "15px",
               "color": "#7a1f2d",
               "letterSpacing": "0.2em",
               "textAlign": "center",

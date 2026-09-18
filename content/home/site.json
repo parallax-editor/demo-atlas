@@ -483,7 +483,7 @@
               },
               "fontSize": "clamp(15px, 1.6vw, 22px)",
               "fontWeight": 300,
-              "color": "#b8c6e6",
+              "color": "#d2ddf2",
               "letterSpacing": "0.08em",
               "lineHeight": "1.7",
               "textAlign": "center",
@@ -517,7 +517,7 @@
                 "x": 50,
                 "y": 60
               },
-              "fontSize": "13px",
+              "fontSize": "15px",
               "color": "#7ee8fa",
               "letterSpacing": "0.3em",
               "animations": [
@@ -546,10 +546,10 @@
     },
     {
       "id": "manifiesto",
-      "height": "130vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #101830 0%, #0d1428 100%)"
+        "value": "linear-gradient(180deg,#070a18 0%,#0a0e1e 100%)"
       },
       "layers": [
         {
@@ -565,23 +565,23 @@
                 "y": 50
               },
               "size": {
-                "width": 124,
+                "width": 120,
                 "height": "auto"
               },
               "anchor": "center",
               "mobile": {
-                "position": {
-                  "x": 50,
-                  "y": 50
-                },
                 "size": {
-                  "width": 380
+                  "width": 360
                 }
               },
-              "opacity": 0.7
+              "opacity": 0.9
             }
           ],
-          "blur": 1
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ],
+          "blur": 5
         },
         {
           "id": "capa-constelacion",
@@ -646,7 +646,7 @@
                 "x": 28,
                 "y": 26
               },
-              "fontSize": "12px",
+              "fontSize": "15px",
               "fontWeight": 600,
               "color": "#7ee8fa",
               "letterSpacing": "0.5em",
@@ -724,8 +724,8 @@
                 "x": 28,
                 "y": 62
               },
-              "fontSize": "clamp(12px, 1.2vw, 15px)",
-              "color": "#7f95bd",
+              "fontSize": "clamp(16px, 1.2vw, 15px)",
+              "color": "#c3d1ee",
               "lineHeight": "1.8",
               "textAlign": "left",
               "mobile": {
@@ -754,7 +754,7 @@
     },
     {
       "id": "puertas",
-      "height": "120vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #101830 0%, #071522 60%, #03121f 100%)"
@@ -773,23 +773,18 @@
                 "y": 50
               },
               "size": {
-                "width": 124,
+                "width": 120,
                 "height": "auto"
               },
               "anchor": "center",
               "mobile": {
-                "position": {
-                  "x": 50,
-                  "y": 50
-                },
                 "size": {
-                  "width": 380
+                  "width": 360
                 }
               },
-              "opacity": 0.4
+              "opacity": 0.65
             }
-          ],
-          "blur": 2
+          ]
         },
         {
           "id": "capa-titulo-puertas",
@@ -828,8 +823,8 @@
                 "x": 50,
                 "y": 23
               },
-              "fontSize": "clamp(13px, 1.3vw, 17px)",
-              "color": "#7f95bd",
+              "fontSize": "clamp(16px, 1.3vw, 17px)",
+              "color": "#c3d1ee",
               "textAlign": "center",
               "lineHeight": "1.6",
               "animations": [
@@ -947,8 +942,8 @@
                 "x": 30,
                 "y": 77
               },
-              "fontSize": "13px",
-              "color": "#5f7ba6",
+              "fontSize": "15px",
+              "color": "#a9bce0",
               "letterSpacing": "0.14em",
               "textAlign": "center",
               "mobile": {
@@ -1062,8 +1057,8 @@
                 "x": 70,
                 "y": 77
               },
-              "fontSize": "13px",
-              "color": "#a06a52",
+              "fontSize": "15px",
+              "color": "#e0a583",
               "letterSpacing": "0.14em",
               "textAlign": "center",
               "mobile": {
@@ -1079,25 +1074,20 @@
     },
     {
       "id": "profundidad",
-      "height": "110vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #03121f 0%, #071726 100%)"
       },
       "layers": [
         {
-          "id": "l3d-far",
-          "depth": -0.5,
-          "perspective3d": true,
-          "parallaxMode": [
-            "mouse",
-            "gyroscope"
-          ],
+          "id": "l-pr-sky",
+          "depth": -0.6,
           "elements": [
             {
               "type": "png",
-              "id": "far",
-              "src": "images/ridge-far.webp",
+              "id": "pr-sky",
+              "src": "images/sky-night.webp",
               "position": {
                 "x": 50,
                 "y": 50
@@ -1112,31 +1102,19 @@
                   "width": 360
                 }
               },
-              "opacity": 0.7,
-              "animations": [
-                {
-                  "type": "rotateY",
-                  "trigger": "mouse",
-                  "from": -7,
-                  "to": 7
-                }
-              ]
+              "opacity": 0.9
             }
-          ]
+          ],
+          "blur": 5
         },
         {
-          "id": "l3d-moon",
-          "depth": -0.2,
-          "perspective3d": true,
-          "parallaxMode": [
-            "mouse",
-            "gyroscope"
-          ],
+          "id": "l-pr-ridge",
+          "depth": -0.3,
           "elements": [
             {
               "type": "png",
-              "id": "moon",
-              "src": "images/moon.webp",
+              "id": "pr-ridge",
+              "src": "images/ridge-far.webp",
               "position": {
                 "x": 50,
                 "y": 50
@@ -1148,68 +1126,73 @@
               "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 350
+                  "width": 360
                 }
               },
-              "animations": [
-                {
-                  "type": "rotateY",
-                  "trigger": "mouse",
-                  "from": -14,
-                  "to": 14
-                },
-                {
-                  "type": "rotateX",
-                  "trigger": "mouse",
-                  "from": 7,
-                  "to": -7
-                },
-                {
-                  "type": "rotateY",
-                  "trigger": "gyroscope",
-                  "from": -12,
-                  "to": 12
-                }
-              ]
+              "opacity": 0.85
             }
-          ]
-        },
-        {
-          "id": "l3d-front",
-          "depth": 0.28,
-          "perspective3d": true,
+          ],
           "parallaxMode": [
             "mouse",
             "gyroscope"
-          ],
+          ]
+        },
+        {
+          "id": "l-pr-moon",
+          "depth": -0.15,
           "elements": [
             {
               "type": "png",
-              "id": "front",
+              "id": "pr-moon",
+              "src": "images/moon.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 112,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 350
+                }
+              }
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-pr-front",
+          "depth": 0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "pr-front",
               "src": "images/foreground.webp",
               "position": {
                 "x": 50,
                 "y": 50
               },
               "size": {
-                "width": 124,
+                "width": 120,
                 "height": "auto"
               },
               "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 380
+                  "width": 370
                 }
-              },
-              "animations": [
-                {
-                  "type": "rotateY",
-                  "trigger": "mouse",
-                  "from": 5,
-                  "to": -5
-                }
-              ]
+              }
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
@@ -1257,8 +1240,8 @@
                 "x": 32,
                 "y": 47
               },
-              "fontSize": "clamp(13px, 1.3vw, 16px)",
-              "color": "#7f95bd",
+              "fontSize": "clamp(16px, 1.3vw, 16px)",
+              "color": "#c3d1ee",
               "lineHeight": "1.8",
               "textAlign": "left",
               "mobile": {
@@ -1285,12 +1268,39 @@
     },
     {
       "id": "colofon",
-      "height": "70vh",
+      "height": "62vh",
       "background": {
         "type": "color",
         "value": "#03121f"
       },
       "layers": [
+        {
+          "id": "l-co-sky",
+          "depth": -0.5,
+          "elements": [
+            {
+              "type": "png",
+              "id": "co-sky",
+              "src": "images/sky-night.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "opacity": 0.5
+            }
+          ],
+          "blur": 5
+        },
         {
           "id": "capa-colofon",
           "depth": 0,
@@ -1327,8 +1337,8 @@
                 "x": 50,
                 "y": 52
               },
-              "fontSize": "clamp(13px, 1.3vw, 16px)",
-              "color": "#7f95bd",
+              "fontSize": "clamp(16px, 1.3vw, 16px)",
+              "color": "#c3d1ee",
               "lineHeight": "1.8",
               "textAlign": "center",
               "animations": [
@@ -1351,7 +1361,7 @@
                 "x": 50,
                 "y": 66
               },
-              "fontSize": "14px",
+              "fontSize": "15px",
               "color": "#7ee8fa",
               "letterSpacing": "0.2em",
               "textAlign": "center",
