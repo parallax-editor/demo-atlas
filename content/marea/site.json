@@ -35,12 +35,360 @@
   "sections": [
     {
       "id": "superficie",
-      "height": "130vh",
+      "height": "100vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #0a3d51 0%, #06263a 60%, #03121f 100%)"
+        "value": "linear-gradient(180deg,#03040c 0%,#070512 100%)"
       },
       "layers": [
+        {
+          "id": "l-starfield-far",
+          "depth": -0.9,
+          "elements": [
+            {
+              "type": "png",
+              "id": "starfield-far",
+              "src": "images/starfield-far.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 118,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1500,
+                  "easing": "easeOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
+          ]
+        },
+        {
+          "id": "l-nebula",
+          "depth": -0.75,
+          "elements": [
+            {
+              "type": "png",
+              "id": "nebula",
+              "src": "images/nebula.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 122,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.05,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical",
+            "mouse",
+            "gyroscope"
+          ],
+          "blur": 3
+        },
+        {
+          "id": "l-planet",
+          "depth": -0.5,
+          "elements": [
+            {
+              "type": "png",
+              "id": "planet",
+              "src": "images/planet.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 350
+                }
+              },
+              "animations": [
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": 3,
+                  "duration": 60000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-planet-rings",
+          "depth": -0.48,
+          "elements": [
+            {
+              "type": "png",
+              "id": "planet-rings",
+              "src": "images/planet-rings.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 350
+                }
+              }
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-starfield-mid",
+          "depth": -0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "starfield-mid",
+              "src": "images/starfield-mid.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 118,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              }
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-asteroids-mid",
+          "depth": -0.1,
+          "elements": [
+            {
+              "type": "png",
+              "id": "asteroids-mid",
+              "src": "images/asteroids-mid.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8,
+                  "to": 8,
+                  "duration": 18000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-ship",
+          "depth": 0.05,
+          "elements": [
+            {
+              "type": "png",
+              "id": "ship",
+              "src": "images/ship.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -14,
+                  "to": 14,
+                  "duration": 26000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-asteroids-near",
+          "depth": 0.25,
+          "elements": [
+            {
+              "type": "png",
+              "id": "asteroids-near",
+              "src": "images/asteroids-near.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": 10,
+                  "to": -10,
+                  "duration": 14000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-debris-fore",
+          "depth": 0.4,
+          "elements": [
+            {
+              "type": "png",
+              "id": "debris-fore",
+              "src": "images/debris-fore.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 122,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": 8,
+                  "duration": 15000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ],
+          "blur": 2
+        },
         {
           "id": "capa-titulo-marea",
           "depth": -0.1,
@@ -52,7 +400,7 @@
               "semanticTag": "h1",
               "position": {
                 "x": 50,
-                "y": 26
+                "y": 40
               },
               "font": "Cormorant Garamond",
               "fontSize": "clamp(56px, 9.5vw, 140px)",
@@ -75,11 +423,11 @@
             {
               "type": "text",
               "id": "sub-marea",
-              "content": "desliza para hundirte",
+              "content": "desliza hacia el vacío",
               "semanticTag": "p",
               "position": {
                 "x": 50,
-                "y": 37
+                "y": 50
               },
               "fontSize": "clamp(13px, 1.4vw, 18px)",
               "color": "#8fd0e8",
@@ -97,108 +445,6 @@
               ]
             }
           ]
-        },
-        {
-          "id": "capa-ola-fondo",
-          "depth": -0.4,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
-          "elements": [
-            {
-              "type": "png",
-              "id": "ola-fondo",
-              "src": "images/ola-fondo.png",
-              "alt": "Ola lejana",
-              "position": {
-                "x": 50,
-                "y": 50
-              },
-              "size": {
-                "width": 120,
-                "height": "auto"
-              },
-              "animations": [
-                {
-                  "type": "translateX",
-                  "trigger": "loop",
-                  "from": -22,
-                  "to": 22,
-                  "duration": 9000,
-                  "yoyo": true,
-                  "easing": "easeInOut"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "capa-ola-media",
-          "depth": -0.15,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
-          "elements": [
-            {
-              "type": "png",
-              "id": "ola-media",
-              "src": "images/ola-media.png",
-              "alt": "Ola media",
-              "position": {
-                "x": 50,
-                "y": 60
-              },
-              "size": {
-                "width": 124,
-                "height": "auto"
-              },
-              "animations": [
-                {
-                  "type": "translateX",
-                  "trigger": "loop",
-                  "from": 26,
-                  "to": -26,
-                  "duration": 7000,
-                  "yoyo": true,
-                  "easing": "easeInOut"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "capa-ola-frente",
-          "depth": 0.25,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
-          "elements": [
-            {
-              "type": "png",
-              "id": "ola-frente",
-              "src": "images/ola-frente.png",
-              "alt": "Ola cercana con espuma",
-              "position": {
-                "x": 50,
-                "y": 71
-              },
-              "size": {
-                "width": 130,
-                "height": "auto"
-              },
-              "animations": [
-                {
-                  "type": "translateX",
-                  "trigger": "loop",
-                  "from": -30,
-                  "to": 30,
-                  "duration": 5600,
-                  "yoyo": true,
-                  "easing": "easeInOut"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -211,86 +457,96 @@
       },
       "layers": [
         {
-          "id": "capa-peces-lejanos",
-          "depth": -0.55,
-          "blur": 2.5,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
+          "id": "l-b-star",
+          "depth": -0.7,
           "elements": [
             {
               "type": "png",
-              "id": "peces-dorados",
-              "src": "images/peces-dorados.png",
-              "alt": "Banco de peces dorados a lo lejos",
+              "id": "b-star",
+              "src": "images/starfield-far.webp",
               "position": {
                 "x": 50,
-                "y": 34
+                "y": 50
               },
               "size": {
-                "width": 74,
+                "width": 124,
                 "height": "auto"
               },
-              "opacity": 0.55,
-              "flipX": true,
-              "animations": [
-                {
-                  "type": "translateX",
-                  "trigger": "scroll",
-                  "from": 120,
-                  "to": -160,
-                  "range": [
-                    0,
-                    1
-                  ]
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
                 }
-              ]
+              },
+              "opacity": 0.9
             }
           ]
         },
         {
-          "id": "capa-peces-cerca",
-          "depth": 0.1,
-          "parallaxMode": [
-            "scroll-vertical",
-            "mouse"
-          ],
+          "id": "l-b-neb",
+          "depth": -0.4,
           "elements": [
             {
               "type": "png",
-              "id": "peces-azules",
-              "src": "images/peces-azules.png",
-              "alt": "Banco de peces azules",
+              "id": "b-neb",
+              "src": "images/nebula.webp",
               "position": {
                 "x": 50,
-                "y": 56
+                "y": 50
               },
               "size": {
-                "width": 86,
+                "width": 122,
                 "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "opacity": 0.6
+            }
+          ],
+          "blur": 3
+        },
+        {
+          "id": "l-b-ast",
+          "depth": -0.05,
+          "elements": [
+            {
+              "type": "png",
+              "id": "b-ast",
+              "src": "images/asteroids-mid.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
               },
               "animations": [
                 {
                   "type": "translateX",
-                  "trigger": "scroll",
-                  "from": -180,
-                  "to": 200,
-                  "range": [
-                    0,
-                    1
-                  ]
-                },
-                {
-                  "type": "translateY",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": -16,
-                  "duration": 4200,
+                  "from": -6,
+                  "to": 6,
+                  "duration": 16000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
@@ -300,7 +556,7 @@
             {
               "type": "text",
               "id": "banco-texto",
-              "content": "Los bancos de peces cruzan\nal ritmo de tu scroll —\ncada cardumen a su velocidad.",
+              "content": "Los campos de asteroides derivan\nal ritmo de tu scroll —\ncada roca a su velocidad.",
               "semanticTag": "h2",
               "position": {
                 "x": 26,
@@ -353,117 +609,86 @@
       },
       "layers": [
         {
-          "id": "capa-burbujas",
-          "depth": -0.6,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
+          "id": "l-a-star",
+          "depth": -0.7,
           "elements": [
             {
               "type": "png",
-              "id": "burbujas",
-              "src": "images/burbujas.png",
-              "alt": "Burbujas ascendiendo",
+              "id": "a-star",
+              "src": "images/starfield-mid.webp",
               "position": {
                 "x": 50,
                 "y": 50
               },
               "size": {
-                "width": 70,
+                "width": 124,
                 "height": "auto"
               },
-              "opacity": 0.8,
-              "animations": [
-                {
-                  "type": "translateY",
-                  "trigger": "scroll",
-                  "from": 60,
-                  "to": -120,
-                  "range": [
-                    0,
-                    1
-                  ]
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
                 }
-              ]
+              },
+              "opacity": 0.9
             }
           ]
         },
         {
-          "id": "capa-medusa",
-          "depth": 0.1,
-          "parallaxMode": [
-            "mouse"
-          ],
+          "id": "l-a-neb",
+          "depth": -0.35,
           "elements": [
             {
               "type": "png",
-              "id": "medusa",
-              "src": "images/medusa.png",
-              "alt": "Medusa rosa luminosa",
+              "id": "a-neb",
+              "src": "images/nebula.webp",
               "position": {
                 "x": 50,
-                "y": 40
+                "y": 50
               },
               "size": {
-                "width": 26,
+                "width": 124,
                 "height": "auto"
               },
+              "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 58
+                  "width": 380
                 }
               },
-              "animations": [
-                {
-                  "type": "translateY",
-                  "trigger": "loop",
-                  "from": 0,
-                  "to": -30,
-                  "duration": 6400,
-                  "yoyo": true,
-                  "easing": "easeInOut"
-                },
-                {
-                  "type": "rotate",
-                  "trigger": "loop",
-                  "from": -5,
-                  "to": 5,
-                  "duration": 8200,
-                  "yoyo": true,
-                  "easing": "easeInOut"
-                },
-                {
-                  "type": "scale",
-                  "trigger": "enter",
-                  "from": 0.7,
-                  "to": 1,
-                  "duration": 1600,
-                  "easing": "easeOutCubic"
-                },
-                {
-                  "type": "translateY",
-                  "trigger": "scroll",
-                  "from": 80,
-                  "to": -120,
-                  "range": [
-                    0,
-                    1
-                  ]
-                },
-                {
-                  "type": "scale",
-                  "trigger": "scroll",
-                  "from": 0.8,
-                  "to": 1.25,
-                  "range": [
-                    0,
-                    1
-                  ]
-                }
-              ]
+              "opacity": 0.8
             }
           ],
-          "blendMode": "screen"
+          "blur": 2
+        },
+        {
+          "id": "l-a-planet",
+          "depth": -0.1,
+          "elements": [
+            {
+              "type": "png",
+              "id": "a-planet",
+              "src": "images/planet.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 110,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 340
+                }
+              }
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
         },
         {
           "id": "capa-texto-abismo",
@@ -472,7 +697,7 @@
             {
               "type": "text",
               "id": "texto-abismo",
-              "content": "En el abismo, cada capa se mueve\na su propia velocidad.",
+              "content": "En el vacío, cada capa se mueve\na su propia velocidad.",
               "position": {
                 "x": 50,
                 "y": 68
@@ -520,73 +745,72 @@
       },
       "layers": [
         {
-          "id": "capa-burbujas-fosa",
-          "depth": -0.4,
-          "blendMode": "screen",
+          "id": "l-f-star",
+          "depth": -0.6,
           "elements": [
             {
               "type": "png",
-              "id": "burbujas-fosa",
-              "src": "images/burbujas.png",
-              "alt": "Burbujas en la fosa",
+              "id": "f-star",
+              "src": "images/starfield-far.webp",
               "position": {
-                "x": 78,
-                "y": 46
+                "x": 50,
+                "y": 50
               },
               "size": {
-                "width": 34,
+                "width": 124,
                 "height": "auto"
               },
-              "opacity": 0.5,
-              "animations": [
-                {
-                  "type": "translateY",
-                  "trigger": "scroll",
-                  "from": 90,
-                  "to": -140,
-                  "range": [
-                    0,
-                    1
-                  ]
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
                 }
-              ]
+              },
+              "opacity": 0.7
             }
           ]
         },
         {
-          "id": "capa-algas",
+          "id": "l-f-debris",
           "depth": 0.2,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
           "elements": [
             {
               "type": "png",
-              "id": "algas",
-              "src": "images/algas.png",
-              "alt": "Algas meciéndose",
+              "id": "f-debris",
+              "src": "images/debris-fore.webp",
               "position": {
                 "x": 50,
-                "y": 86
+                "y": 50
               },
               "size": {
-                "width": 112,
+                "width": 122,
                 "height": "auto"
               },
-              "anchor": "bottom",
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
+                }
+              },
+              "opacity": 0.7,
               "animations": [
                 {
-                  "type": "skew",
+                  "type": "translateX",
                   "trigger": "loop",
-                  "from": -3,
-                  "to": 3,
-                  "duration": 5200,
+                  "from": 0,
+                  "to": 6,
+                  "duration": 16000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
             }
-          ]
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ],
+          "blur": 2
         },
         {
           "id": "capa-fosa-texto",
@@ -656,5 +880,17 @@
     "size": 20,
     "hoverScale": 2.2,
     "blendMode": "screen"
+  },
+  "quality": {
+    "mobile": {
+      "maxLayers": 16,
+      "blurEnabled": true,
+      "loopFps": 30
+    },
+    "desktop": {
+      "maxLayers": 24,
+      "blurEnabled": true,
+      "loopFps": 60
+    }
   }
 }

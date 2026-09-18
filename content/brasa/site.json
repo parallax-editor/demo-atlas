@@ -35,59 +35,332 @@
   "sections": [
     {
       "id": "amanecer",
-      "height": "170vh",
+      "height": "100vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #2b0f2e 0%, #7a2c3f 45%, #f4845f 100%)"
+        "value": "linear-gradient(180deg,#2a1608 0%,#3d2410 100%)"
       },
       "layers": [
         {
-          "id": "capa-sol",
-          "depth": -0.55,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
+          "id": "l-sky-sunset",
+          "depth": -0.9,
           "elements": [
             {
               "type": "png",
-              "id": "sol",
-              "src": "images/sol.png",
-              "alt": "Sol ardiente",
+              "id": "sky-sunset",
+              "src": "images/sky-sunset.webp",
               "position": {
                 "x": 50,
-                "y": 40
+                "y": 50
               },
               "size": {
-                "width": 30,
+                "width": 118,
                 "height": "auto"
               },
+              "anchor": "center",
               "mobile": {
                 "size": {
-                  "width": 62
+                  "width": 360
                 }
               },
               "animations": [
                 {
-                  "type": "translateY",
-                  "trigger": "scroll",
-                  "from": 120,
-                  "to": -160,
-                  "range": [
-                    0,
-                    1
-                  ]
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 1500,
+                  "easing": "easeOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
+          ]
+        },
+        {
+          "id": "l-sun-flare",
+          "depth": -0.78,
+          "elements": [
+            {
+              "type": "png",
+              "id": "sun-flare",
+              "src": "images/sun-flare.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 },
                 {
                   "type": "scale",
                   "trigger": "loop",
                   "from": 1,
-                  "to": 1.05,
-                  "duration": 4200,
+                  "to": 1.04,
+                  "duration": 9000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "scroll-vertical",
+            "mouse",
+            "gyroscope"
+          ],
+          "blur": 2
+        },
+        {
+          "id": "l-canyon-far",
+          "depth": -0.4,
+          "elements": [
+            {
+              "type": "png",
+              "id": "canyon-far",
+              "src": "images/canyon-far.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              }
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
+          ],
+          "blur": 1
+        },
+        {
+          "id": "l-dust-far",
+          "depth": -0.32,
+          "elements": [
+            {
+              "type": "png",
+              "id": "dust-far",
+              "src": "images/dust-far.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 122,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6,
+                  "to": 6,
+                  "duration": 16000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-canyon-mid",
+          "depth": -0.15,
+          "elements": [
+            {
+              "type": "png",
+              "id": "canyon-mid",
+              "src": "images/canyon-mid.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              }
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
+          ]
+        },
+        {
+          "id": "l-dust-mid",
+          "depth": -0.02,
+          "elements": [
+            {
+              "type": "png",
+              "id": "dust-mid",
+              "src": "images/dust-mid.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 124,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": 5,
+                  "to": -5,
+                  "duration": 13000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-trees-near",
+          "depth": 0.18,
+          "elements": [
+            {
+              "type": "png",
+              "id": "trees-near",
+              "src": "images/trees-near.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              }
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
+          ]
+        },
+        {
+          "id": "l-particles",
+          "depth": 0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "particles",
+              "src": "images/particles.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 126,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 390
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 0,
+                  "to": -10,
+                  "duration": 9000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-foreground",
+          "depth": 0.4,
+          "elements": [
+            {
+              "type": "png",
+              "id": "foreground",
+              "src": "images/foreground.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              }
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
           ]
         },
         {
@@ -101,7 +374,7 @@
               "semanticTag": "h1",
               "position": {
                 "x": 50,
-                "y": 24
+                "y": 40
               },
               "font": "Cormorant Garamond",
               "fontSize": "clamp(56px, 9.5vw, 140px)",
@@ -128,7 +401,7 @@
               "semanticTag": "p",
               "position": {
                 "x": 50,
-                "y": 34
+                "y": 50
               },
               "fontSize": "clamp(13px, 1.4vw, 18px)",
               "color": "#ffd7b8",
@@ -146,118 +419,6 @@
               ]
             }
           ]
-        },
-        {
-          "id": "capa-duna-fondo",
-          "depth": -0.3,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
-          "elements": [
-            {
-              "type": "png",
-              "id": "duna-fondo",
-              "src": "images/duna-fondo.png",
-              "alt": "Duna lejana",
-              "position": {
-                "x": 50,
-                "y": 52
-              },
-              "size": {
-                "width": 118,
-                "height": "auto"
-              }
-            }
-          ]
-        },
-        {
-          "id": "capa-duna-media",
-          "depth": -0.1,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
-          "elements": [
-            {
-              "type": "png",
-              "id": "duna-media",
-              "src": "images/duna-media.png",
-              "alt": "Duna media",
-              "position": {
-                "x": 50,
-                "y": 62
-              },
-              "size": {
-                "width": 124,
-                "height": "auto"
-              }
-            }
-          ]
-        },
-        {
-          "id": "capa-duna-frente",
-          "depth": 0.28,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
-          "elements": [
-            {
-              "type": "png",
-              "id": "duna-frente",
-              "src": "images/duna-frente.png",
-              "alt": "Duna cercana",
-              "position": {
-                "x": 50,
-                "y": 74
-              },
-              "size": {
-                "width": 132,
-                "height": "auto"
-              }
-            }
-          ]
-        },
-        {
-          "id": "capa-calor",
-          "depth": 0.15,
-          "blendMode": "screen",
-          "blur": 1.5,
-          "elements": [
-            {
-              "type": "png",
-              "id": "calor",
-              "src": "images/calor.png",
-              "alt": "Vibración de calor",
-              "position": {
-                "x": 50,
-                "y": 80
-              },
-              "size": {
-                "width": 120,
-                "height": "auto"
-              },
-              "opacity": 0.8,
-              "animations": [
-                {
-                  "type": "skew",
-                  "trigger": "loop",
-                  "from": -2,
-                  "to": 2,
-                  "duration": 2600,
-                  "yoyo": true,
-                  "easing": "easeInOut"
-                },
-                {
-                  "type": "translateY",
-                  "trigger": "loop",
-                  "from": 0,
-                  "to": -18,
-                  "duration": 3400,
-                  "yoyo": true,
-                  "easing": "easeInOut"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -270,83 +431,69 @@
       },
       "layers": [
         {
-          "id": "capa-nubes",
-          "depth": -0.5,
-          "blur": 2,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
+          "id": "l-ci-sky",
+          "depth": -0.7,
           "elements": [
             {
               "type": "png",
-              "id": "nubes-rosa",
-              "src": "images/nubes-rosa.png",
-              "alt": "Nubes rosadas",
+              "id": "ci-sky",
+              "src": "images/sky-sunset.webp",
               "position": {
                 "x": 50,
-                "y": 30
+                "y": 50
               },
               "size": {
-                "width": 118,
+                "width": 124,
                 "height": "auto"
               },
-              "opacity": 0.85,
-              "animations": [
-                {
-                  "type": "translateX",
-                  "trigger": "loop",
-                  "from": -34,
-                  "to": 34,
-                  "duration": 16000,
-                  "yoyo": true,
-                  "easing": "easeInOut"
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
                 }
-              ]
+              },
+              "opacity": 0.85
             }
           ]
         },
         {
-          "id": "capa-aves",
-          "depth": 0.05,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
+          "id": "l-ci-part",
+          "depth": -0.1,
           "elements": [
             {
               "type": "png",
-              "id": "aves",
-              "src": "images/aves.png",
-              "alt": "Aves cruzando el cielo",
+              "id": "ci-part",
+              "src": "images/particles.webp",
               "position": {
                 "x": 50,
-                "y": 40
+                "y": 50
               },
               "size": {
-                "width": 62,
+                "width": 124,
                 "height": "auto"
               },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
+                }
+              },
               "animations": [
-                {
-                  "type": "translateX",
-                  "trigger": "scroll",
-                  "from": -220,
-                  "to": 240,
-                  "range": [
-                    0,
-                    1
-                  ]
-                },
                 {
                   "type": "translateY",
                   "trigger": "loop",
                   "from": 0,
                   "to": -12,
-                  "duration": 2800,
+                  "duration": 10000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
@@ -407,55 +554,55 @@
       },
       "layers": [
         {
-          "id": "capa-noche-estrellas",
-          "depth": -0.6,
+          "id": "l-nd-sky",
+          "depth": -0.7,
           "elements": [
             {
               "type": "png",
-              "id": "estrellas-desierto",
-              "src": "images/estrellas.png",
-              "alt": "Estrellas del desierto",
+              "id": "nd-sky",
+              "src": "images/sky-sunset.webp",
               "position": {
                 "x": 50,
-                "y": 34
+                "y": 50
               },
               "size": {
-                "width": 116,
+                "width": 122,
                 "height": "auto"
               },
-              "animations": [
-                {
-                  "type": "fadeIn",
-                  "trigger": "scroll",
-                  "from": 0,
-                  "to": 1,
-                  "range": [
-                    0.1,
-                    0.45
-                  ]
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
                 }
-              ]
+              },
+              "opacity": 0.35
             }
-          ]
+          ],
+          "blur": 2
         },
         {
-          "id": "capa-noche-dunas",
-          "depth": 0.1,
+          "id": "l-nd-canyon",
+          "depth": -0.2,
           "elements": [
             {
               "type": "png",
-              "id": "dunas-noche",
-              "src": "images/duna-fondo.png",
-              "alt": "Dunas de noche",
+              "id": "nd-canyon",
+              "src": "images/canyon-far.webp",
               "position": {
                 "x": 50,
-                "y": 80
+                "y": 50
               },
               "size": {
-                "width": 126,
+                "width": 118,
                 "height": "auto"
               },
-              "opacity": 0.55
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "opacity": 0.7
             }
           ]
         },
@@ -516,6 +663,33 @@
         "value": "linear-gradient(180deg, #f4845f 0%, #f7b267 100%)"
       },
       "layers": [
+        {
+          "id": "l-ca-sky",
+          "depth": -0.6,
+          "elements": [
+            {
+              "type": "png",
+              "id": "ca-sky",
+              "src": "images/sky-sunset.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 124,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 380
+                }
+              },
+              "opacity": 0.3
+            }
+          ],
+          "blur": 3
+        },
         {
           "id": "capa-texto-calor",
           "depth": 0,
@@ -592,5 +766,17 @@
     "size": 20,
     "hoverScale": 2.2,
     "blendMode": "difference"
+  },
+  "quality": {
+    "mobile": {
+      "maxLayers": 16,
+      "blurEnabled": true,
+      "loopFps": 30
+    },
+    "desktop": {
+      "maxLayers": 24,
+      "blurEnabled": true,
+      "loopFps": 60
+    }
   }
 }
