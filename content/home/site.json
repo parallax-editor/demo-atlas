@@ -75,6 +75,24 @@
                   "to": 1,
                   "duration": 1500,
                   "easing": "easeOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.048,
+                  "duration": 13700,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -9.6,
+                  "to": 9.6,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
@@ -216,7 +234,27 @@
                 "size": {
                   "width": 360
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.037,
+                  "duration": 12050,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.4,
+                  "to": 7.4,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -302,7 +340,27 @@
                 "size": {
                   "width": 360
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.0324,
+                  "duration": 11360,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6.48,
+                  "to": 6.48,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -387,7 +445,27 @@
                 "size": {
                   "width": 360
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.0332000000000001,
+                  "duration": 11480,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6.64,
+                  "to": 6.64,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -472,7 +550,27 @@
                 "size": {
                   "width": 370
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.0368,
+                  "duration": 12020,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.36,
+                  "to": 7.36,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -613,7 +711,27 @@
                   "width": 360
                 }
               },
-              "opacity": 0.9
+              "opacity": 0.9,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.044,
+                  "duration": 13100,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8.8,
+                  "to": 8.8,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -653,20 +771,22 @@
               },
               "animations": [
                 {
-                  "type": "clipPath",
-                  "trigger": "scroll",
-                  "from": 0,
-                  "to": 100,
-                  "range": [
-                    0.1,
-                    0.55
-                  ]
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.034,
+                  "duration": 11600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 },
                 {
-                  "type": "rotate",
-                  "trigger": "mouse",
-                  "from": -3,
-                  "to": 3
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6.8,
+                  "to": 6.8,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
@@ -821,7 +941,27 @@
                   "width": 360
                 }
               },
-              "opacity": 0.65
+              "opacity": 0.65,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.042,
+                  "duration": 12800,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8.4,
+                  "to": 8.4,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ]
         },
@@ -1141,7 +1281,27 @@
                   "width": 360
                 }
               },
-              "opacity": 0.9
+              "opacity": 0.9,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.042,
+                  "duration": 12800,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8.4,
+                  "to": 8.4,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "blur": 5
@@ -1168,7 +1328,27 @@
                   "width": 360
                 }
               },
-              "opacity": 0.85
+              "opacity": 0.85,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.036,
+                  "duration": 11900,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.2,
+                  "to": 7.2,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -1246,7 +1426,27 @@
                 "size": {
                   "width": 370
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.036,
+                  "duration": 11900,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.2,
+                  "to": 7.2,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -1355,7 +1555,27 @@
                   "width": 360
                 }
               },
-              "opacity": 0.5
+              "opacity": 0.5,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.04,
+                  "duration": 12500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8.0,
+                  "to": 8.0,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "blur": 5

@@ -169,7 +169,27 @@
                 "size": {
                   "width": 360
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.038,
+                  "duration": 12200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.6,
+                  "to": 7.6,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -247,7 +267,27 @@
                 "size": {
                   "width": 360
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.033,
+                  "duration": 11450,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6.6,
+                  "to": 6.6,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -324,7 +364,27 @@
                 "size": {
                   "width": 360
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.0336,
+                  "duration": 11540,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6.72,
+                  "to": 6.72,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -401,7 +461,27 @@
                 "size": {
                   "width": 370
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.038,
+                  "duration": 12200,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.6,
+                  "to": 7.6,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -476,54 +556,169 @@
       },
       "layers": [
         {
-          "id": "l-dust",
-          "depth": 0.1,
-          "parallaxMode": [
-            "mouse"
-          ],
+          "id": "l-c-sun",
+          "depth": -0.6,
           "elements": [
             {
               "type": "png",
-              "id": "dustc",
-              "src": "images/dust-clean.svg",
+              "id": "c-sun",
+              "src": "images/sunglow.svg",
               "position": {
                 "x": 50,
-                "y": 50
+                "y": 22
               },
               "size": {
-                "width": "110%"
+                "width": 72,
+                "height": "auto"
               },
               "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
               "animations": [
                 {
-                  "type": "translateY",
+                  "type": "scale",
                   "trigger": "loop",
-                  "from": -40,
-                  "to": 40,
-                  "duration": 7000,
+                  "from": 1,
+                  "to": 1.12,
+                  "duration": 6000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
-                  "type": "translateX",
+                  "type": "translateY",
                   "trigger": "loop",
-                  "from": -20,
-                  "to": 20,
-                  "duration": 11000,
+                  "from": -14,
+                  "to": 14,
+                  "duration": 9000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
                   "type": "fadeIn",
                   "trigger": "loop",
-                  "from": 0.5,
+                  "from": 0.7,
                   "to": 1,
-                  "duration": 4000,
+                  "duration": 5000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-c-d1",
+          "depth": -0.1,
+          "elements": [
+            {
+              "type": "png",
+              "id": "c-d1",
+              "src": "images/dust-clean.svg",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -35,
+                  "to": 35,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -18,
+                  "to": 18,
+                  "duration": 9000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.1,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-c-d2",
+          "depth": 0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "c-d2",
+              "src": "images/dust-clean.svg",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 130,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
+              "opacity": 0.7,
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 30,
+                  "to": -30,
+                  "duration": 7500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": 16,
+                  "to": -16,
+                  "duration": 11000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
@@ -584,54 +779,170 @@
       },
       "layers": [
         {
-          "id": "l-dust",
-          "depth": 0.1,
-          "parallaxMode": [
-            "mouse"
-          ],
+          "id": "l-n-sun",
+          "depth": -0.6,
           "elements": [
             {
               "type": "png",
-              "id": "dustc",
-              "src": "images/dust-clean.svg",
+              "id": "n-sun",
+              "src": "images/sunglow.svg",
               "position": {
                 "x": 50,
-                "y": 50
+                "y": 22
               },
               "size": {
-                "width": "110%"
+                "width": 72,
+                "height": "auto"
               },
               "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
+              "opacity": 0.55,
               "animations": [
                 {
-                  "type": "translateY",
+                  "type": "scale",
                   "trigger": "loop",
-                  "from": -40,
-                  "to": 40,
-                  "duration": 7000,
+                  "from": 1,
+                  "to": 1.12,
+                  "duration": 6000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
-                  "type": "translateX",
+                  "type": "translateY",
                   "trigger": "loop",
-                  "from": -20,
-                  "to": 20,
-                  "duration": 11000,
+                  "from": -14,
+                  "to": 14,
+                  "duration": 9000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
                   "type": "fadeIn",
                   "trigger": "loop",
-                  "from": 0.5,
+                  "from": 0.7,
                   "to": 1,
-                  "duration": 4000,
+                  "duration": 5000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-n-d1",
+          "depth": -0.1,
+          "elements": [
+            {
+              "type": "png",
+              "id": "n-d1",
+              "src": "images/dust-clean.svg",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -35,
+                  "to": 35,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -18,
+                  "to": 18,
+                  "duration": 9000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.1,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-n-d2",
+          "depth": 0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "n-d2",
+              "src": "images/dust-clean.svg",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 130,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
+              "opacity": 0.7,
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 30,
+                  "to": -30,
+                  "duration": 7500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": 16,
+                  "to": -16,
+                  "duration": 11000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
@@ -692,54 +1003,170 @@
       },
       "layers": [
         {
-          "id": "l-dust",
-          "depth": 0.1,
-          "parallaxMode": [
-            "mouse"
-          ],
+          "id": "l-ca-sun",
+          "depth": -0.5,
           "elements": [
             {
               "type": "png",
-              "id": "dustc",
-              "src": "images/dust-clean.svg",
+              "id": "ca-sun",
+              "src": "images/sunglow.svg",
               "position": {
                 "x": 50,
-                "y": 50
+                "y": 22
               },
               "size": {
-                "width": "110%"
+                "width": 72,
+                "height": "auto"
               },
               "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
+              "opacity": 0.7,
               "animations": [
                 {
-                  "type": "translateY",
+                  "type": "scale",
                   "trigger": "loop",
-                  "from": -40,
-                  "to": 40,
-                  "duration": 7000,
+                  "from": 1,
+                  "to": 1.12,
+                  "duration": 6000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
-                  "type": "translateX",
+                  "type": "translateY",
                   "trigger": "loop",
-                  "from": -20,
-                  "to": 20,
-                  "duration": 11000,
+                  "from": -14,
+                  "to": 14,
+                  "duration": 9000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
                   "type": "fadeIn",
                   "trigger": "loop",
-                  "from": 0.5,
+                  "from": 0.7,
                   "to": 1,
-                  "duration": 4000,
+                  "duration": 5000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-ca-d1",
+          "depth": -0.1,
+          "elements": [
+            {
+              "type": "png",
+              "id": "ca-d1",
+              "src": "images/dust-clean.svg",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -35,
+                  "to": 35,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -18,
+                  "to": 18,
+                  "duration": 9000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.1,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-ca-d2",
+          "depth": 0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "ca-d2",
+              "src": "images/dust-clean.svg",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 130,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": "380"
+                }
+              },
+              "opacity": 0.7,
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": 30,
+                  "to": -30,
+                  "duration": 7500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": 16,
+                  "to": -16,
+                  "duration": 11000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
