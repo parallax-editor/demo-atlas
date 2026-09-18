@@ -71,6 +71,24 @@
                   "to": 1,
                   "duration": 1500,
                   "easing": "easeOut"
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -16,
+                  "to": 16,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.04,
+                  "duration": 5500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
@@ -103,11 +121,11 @@
               },
               "animations": [
                 {
-                  "type": "fadeIn",
+                  "type": "translateY",
                   "trigger": "loop",
-                  "from": 0.7,
-                  "to": 1,
-                  "duration": 6000,
+                  "from": -16,
+                  "to": 16,
+                  "duration": 7000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
@@ -116,7 +134,7 @@
                   "trigger": "loop",
                   "from": 1,
                   "to": 1.04,
-                  "duration": 9000,
+                  "duration": 5500,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -185,9 +203,18 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": -6,
-                  "to": 6,
-                  "duration": 16000,
+                  "from": -30,
+                  "to": 30,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 5000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -253,9 +280,18 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": 5,
-                  "to": -5,
-                  "duration": 13000,
+                  "from": -30,
+                  "to": 30,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 5000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -321,8 +357,17 @@
                 {
                   "type": "translateY",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": -10,
+                  "from": -30,
+                  "to": 30,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -14,
+                  "to": 14,
                   "duration": 9000,
                   "yoyo": true,
                   "easing": "easeInOut"
@@ -427,130 +472,57 @@
       "height": "95vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg,#c98a4a 0%,#b5703a 55%,#7a4a2a 100%)"
+        "value": "linear-gradient(180deg,#e0a35a 0%,#c57c3e 45%,#8a5228 100%)"
       },
       "layers": [
         {
-          "id": "l-c-canyon-far",
-          "depth": -0.4,
-          "elements": [
-            {
-              "type": "png",
-              "id": "c-canyon-far",
-              "src": "images/canyon-far.webp",
-              "position": {
-                "x": 50,
-                "y": 50
-              },
-              "size": {
-                "width": 116,
-                "height": "auto"
-              },
-              "anchor": "center",
-              "mobile": {
-                "size": {
-                  "width": 360
-                }
-              },
-              "opacity": 0.8
-            }
-          ],
+          "id": "l-dust",
+          "depth": 0.1,
           "parallaxMode": [
-            "mouse",
-            "gyroscope"
-          ]
-        },
-        {
-          "id": "l-c-canyon-mid",
-          "depth": -0.1,
-          "elements": [
-            {
-              "type": "png",
-              "id": "c-canyon-mid",
-              "src": "images/canyon-mid.webp",
-              "position": {
-                "x": 50,
-                "y": 50
-              },
-              "size": {
-                "width": 118,
-                "height": "auto"
-              },
-              "anchor": "center",
-              "mobile": {
-                "size": {
-                  "width": 370
-                }
-              },
-              "opacity": 0.5
-            }
+            "mouse"
           ],
-          "parallaxMode": [
-            "mouse",
-            "gyroscope"
-          ]
-        },
-        {
-          "id": "l-c-part",
-          "depth": 0.15,
           "elements": [
             {
               "type": "png",
-              "id": "c-part",
-              "src": "images/particles.webp",
+              "id": "dustc",
+              "src": "images/dust-clean.svg",
               "position": {
                 "x": 50,
                 "y": 50
               },
               "size": {
-                "width": 124,
-                "height": "auto"
+                "width": "110%"
               },
               "anchor": "center",
-              "mobile": {
-                "size": {
-                  "width": 380
-                }
-              },
               "animations": [
                 {
                   "type": "translateY",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": -12,
-                  "duration": 10000,
+                  "from": -40,
+                  "to": 40,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -20,
+                  "to": 20,
+                  "duration": 11000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.5,
+                  "to": 1,
+                  "duration": 4000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
-            }
-          ],
-          "parallaxMode": [
-            "mouse",
-            "gyroscope"
-          ]
-        },
-        {
-          "id": "l-scrim",
-          "depth": 0.05,
-          "elements": [
-            {
-              "type": "png",
-              "id": "scrim",
-              "src": "images/scrim-warm.svg",
-              "position": {
-                "x": 50,
-                "y": 100
-              },
-              "size": {
-                "width": "102%"
-              },
-              "anchor": "bottom",
-              "mobile": {
-                "size": {
-                  "width": "220"
-                }
-              }
             }
           ]
         },
@@ -570,7 +542,7 @@
               "font": "Cormorant Garamond",
               "fontSize": "clamp(26px, 3.6vw, 52px)",
               "fontWeight": 500,
-              "color": "#4a1420",
+              "color": "#fdf3e8",
               "lineHeight": "1.4",
               "letterSpacing": "0.04em",
               "textAlign": "right",
@@ -608,90 +580,57 @@
       "height": "95vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg,#3a2a4a 0%,#5a3a3a 60%,#2a1a1a 100%)"
+        "value": "linear-gradient(180deg,#5a3a62 0%,#7a4642 55%,#2a1618 100%)"
       },
       "layers": [
         {
-          "id": "l-n-canyon",
-          "depth": -0.3,
+          "id": "l-dust",
+          "depth": 0.1,
+          "parallaxMode": [
+            "mouse"
+          ],
           "elements": [
             {
               "type": "png",
-              "id": "n-canyon",
-              "src": "images/canyon-mid.webp",
+              "id": "dustc",
+              "src": "images/dust-clean.svg",
               "position": {
                 "x": 50,
                 "y": 50
               },
               "size": {
-                "width": 118,
-                "height": "auto"
+                "width": "110%"
               },
               "anchor": "center",
-              "mobile": {
-                "size": {
-                  "width": 370
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -40,
+                  "to": 40,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -20,
+                  "to": 20,
+                  "duration": 11000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.5,
+                  "to": 1,
+                  "duration": 4000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
-              },
-              "opacity": 0.6
-            }
-          ],
-          "parallaxMode": [
-            "mouse",
-            "gyroscope"
-          ]
-        },
-        {
-          "id": "l-n-trees",
-          "depth": 0.2,
-          "elements": [
-            {
-              "type": "png",
-              "id": "n-trees",
-              "src": "images/trees-near.webp",
-              "position": {
-                "x": 50,
-                "y": 50
-              },
-              "size": {
-                "width": 120,
-                "height": "auto"
-              },
-              "anchor": "center",
-              "mobile": {
-                "size": {
-                  "width": 370
-                }
-              },
-              "opacity": 0.95
-            }
-          ],
-          "parallaxMode": [
-            "mouse",
-            "gyroscope"
-          ]
-        },
-        {
-          "id": "l-scrim",
-          "depth": 0.05,
-          "elements": [
-            {
-              "type": "png",
-              "id": "scrim",
-              "src": "images/scrim-warm.svg",
-              "position": {
-                "x": 50,
-                "y": 100
-              },
-              "size": {
-                "width": "102%"
-              },
-              "anchor": "bottom",
-              "mobile": {
-                "size": {
-                  "width": "220"
-                }
-              }
+              ]
             }
           ]
         },
@@ -711,7 +650,7 @@
               "font": "Cormorant Garamond",
               "fontSize": "clamp(26px, 3.8vw, 54px)",
               "fontWeight": 500,
-              "color": "#ffe9d6",
+              "color": "#fdf3e8",
               "lineHeight": "1.5",
               "letterSpacing": "0.05em",
               "textAlign": "center",
@@ -749,37 +688,58 @@
       "height": "72vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg,#3d2410 0%,#241206 100%)"
+        "value": "linear-gradient(180deg,#6a3e1e 0%,#2a1608 100%)"
       },
       "layers": [
         {
-          "id": "l-ca-canyon",
-          "depth": -0.3,
+          "id": "l-dust",
+          "depth": 0.1,
+          "parallaxMode": [
+            "mouse"
+          ],
           "elements": [
             {
               "type": "png",
-              "id": "ca-canyon",
-              "src": "images/canyon-far.webp",
+              "id": "dustc",
+              "src": "images/dust-clean.svg",
               "position": {
                 "x": 50,
                 "y": 50
               },
               "size": {
-                "width": 116,
-                "height": "auto"
+                "width": "110%"
               },
               "anchor": "center",
-              "mobile": {
-                "size": {
-                  "width": 360
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -40,
+                  "to": 40,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -20,
+                  "to": 20,
+                  "duration": 11000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.5,
+                  "to": 1,
+                  "duration": 4000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
-              },
-              "opacity": 0.5
+              ]
             }
-          ],
-          "parallaxMode": [
-            "mouse",
-            "gyroscope"
           ]
         },
         {
@@ -797,7 +757,7 @@
               "font": "Cormorant Garamond",
               "fontSize": "clamp(22px, 3vw, 40px)",
               "fontWeight": 500,
-              "color": "#4a1420",
+              "color": "#fdf3e8",
               "lineHeight": "1.6",
               "letterSpacing": "0.04em",
               "textAlign": "center",
@@ -828,8 +788,8 @@
                 "x": 50,
                 "y": 62
               },
-              "fontSize": "15px",
-              "color": "#7a1f2d",
+              "fontSize": "16px",
+              "color": "#fdf3e8",
               "letterSpacing": "0.2em",
               "textAlign": "center",
               "interactive": true,

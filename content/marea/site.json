@@ -71,6 +71,15 @@
                   "to": 1,
                   "duration": 1500,
                   "easing": "easeOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.02,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
@@ -103,20 +112,20 @@
               },
               "animations": [
                 {
-                  "type": "fadeIn",
+                  "type": "scale",
                   "trigger": "loop",
-                  "from": 0.7,
-                  "to": 1,
+                  "from": 1,
+                  "to": 1.08,
                   "duration": 7000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
-                  "type": "scale",
+                  "type": "translateX",
                   "trigger": "loop",
-                  "from": 1,
-                  "to": 1.05,
-                  "duration": 12000,
+                  "from": -14,
+                  "to": 14,
+                  "duration": 16000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -154,11 +163,20 @@
               },
               "animations": [
                 {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -14,
+                  "to": 14,
+                  "duration": 9000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
                   "type": "rotate",
                   "trigger": "loop",
-                  "from": 0,
+                  "from": -3,
                   "to": 3,
-                  "duration": 60000,
+                  "duration": 40000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -191,7 +209,18 @@
                 "size": {
                   "width": 350
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -2,
+                  "to": 2,
+                  "duration": 30000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -220,7 +249,18 @@
                 "size": {
                   "width": 360
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.02,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
@@ -254,9 +294,18 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
+                  "from": -35,
+                  "to": 35,
+                  "duration": 8000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
                   "from": -8,
                   "to": 8,
-                  "duration": 18000,
+                  "duration": 11000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -294,9 +343,9 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": -14,
-                  "to": 14,
-                  "duration": 26000,
+                  "from": -70,
+                  "to": 70,
+                  "duration": 13000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -334,9 +383,27 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": 10,
-                  "to": -10,
-                  "duration": 14000,
+                  "from": -45,
+                  "to": 45,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -25,
+                  "to": 25,
+                  "duration": 7500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -10,
+                  "to": 10,
+                  "duration": 9000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -374,9 +441,18 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": 8,
-                  "duration": 15000,
+                  "from": -40,
+                  "to": 40,
+                  "duration": 5500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -12,
+                  "to": 12,
+                  "duration": 7000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -478,7 +554,18 @@
                   "width": 370
                 }
               },
-              "opacity": 0.95
+              "opacity": 0.95,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.02,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ]
         },
@@ -504,7 +591,27 @@
                   "width": 370
                 }
               },
-              "opacity": 0.7
+              "opacity": 0.7,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.08,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -14,
+                  "to": 14,
+                  "duration": 16000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "blur": 2
@@ -630,7 +737,18 @@
                   "width": 370
                 }
               },
-              "opacity": 0.95
+              "opacity": 0.95,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.02,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ]
         },
@@ -656,7 +774,27 @@
                   "width": 380
                 }
               },
-              "opacity": 0.85
+              "opacity": 0.85,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.08,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -14,
+                  "to": 14,
+                  "duration": 16000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "blur": 1
@@ -685,11 +823,20 @@
               },
               "animations": [
                 {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -14,
+                  "to": 14,
+                  "duration": 9000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
                   "type": "rotate",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": 4,
-                  "duration": 60000,
+                  "from": -3,
+                  "to": 3,
+                  "duration": 40000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -777,7 +924,18 @@
                   "width": 370
                 }
               },
-              "opacity": 0.9
+              "opacity": 0.9,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.02,
+                  "duration": 6000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ]
         },
@@ -803,7 +961,27 @@
                   "width": 370
                 }
               },
-              "opacity": 0.6
+              "opacity": 0.6,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.08,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -14,
+                  "to": 14,
+                  "duration": 16000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "blur": 2
@@ -835,9 +1013,18 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": 6,
-                  "duration": 16000,
+                  "from": -40,
+                  "to": 40,
+                  "duration": 5500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "rotate",
+                  "trigger": "loop",
+                  "from": -12,
+                  "to": 12,
+                  "duration": 7000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }

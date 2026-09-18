@@ -111,19 +111,22 @@
               },
               "animations": [
                 {
-                  "type": "fadeIn",
+                  "type": "translateX",
                   "trigger": "loop",
-                  "from": 0.6,
-                  "to": 1,
-                  "duration": 5200,
+                  "from": -28,
+                  "to": 28,
+                  "duration": 6500,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
-                  "type": "translateX",
-                  "trigger": "mouse",
-                  "from": -10,
-                  "to": 10
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.55,
+                  "to": 1,
+                  "duration": 3800,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
@@ -165,9 +168,18 @@
                 {
                   "type": "translateY",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": -8,
+                  "from": -16,
+                  "to": 16,
                   "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.04,
+                  "duration": 5500,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -242,9 +254,18 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": -6,
-                  "to": 6,
-                  "duration": 16000,
+                  "from": -30,
+                  "to": 30,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 5000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -318,9 +339,18 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": 5,
-                  "to": -5,
-                  "duration": 13000,
+                  "from": -30,
+                  "to": 30,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 5000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -394,9 +424,18 @@
                 {
                   "type": "translateX",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": 8,
-                  "duration": 14000,
+                  "from": -30,
+                  "to": 30,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 5000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
@@ -1158,7 +1197,27 @@
                 "size": {
                   "width": 350
                 }
-              }
+              },
+              "animations": [
+                {
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -16,
+                  "to": 16,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.04,
+                  "duration": 5500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
           ],
           "parallaxMode": [
