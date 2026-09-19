@@ -15,8 +15,8 @@
       }
     ],
     "transition": {
-      "in": "crossfade-blur",
-      "out": "crossfade-blur",
+      "in": "fade",
+      "out": "fade",
       "duration": 700
     },
     "lang": "es"
