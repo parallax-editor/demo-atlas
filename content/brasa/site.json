@@ -145,8 +145,7 @@
             "scroll-vertical",
             "mouse",
             "gyroscope"
-          ],
-          "blur": 2
+          ]
         },
         {
           "id": "l-canyon-far",
@@ -194,8 +193,7 @@
           ],
           "parallaxMode": [
             "scroll-vertical"
-          ],
-          "blur": 1
+          ]
         },
         {
           "id": "l-dust-far",
