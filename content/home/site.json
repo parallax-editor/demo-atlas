@@ -35,31 +35,37 @@
   "sections": [
     {
       "id": "hero-noche",
-      "height": "160vh",
+      "height": "100vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #05070f 0%, #0b1026 55%, #101830 100%)"
+        "value": "linear-gradient(180deg,#070a16 0%,#0a0e1e 100%)"
       },
       "layers": [
         {
-          "id": "capa-estrellas",
+          "id": "l-sky-night",
           "depth": -0.9,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
           "elements": [
             {
               "type": "png",
-              "id": "estrellas",
-              "src": "images/estrellas.png",
-              "alt": "Cielo estrellado",
+              "id": "sky-night",
+              "src": "images/sky-night.webp",
               "position": {
                 "x": 50,
-                "y": 30
+                "y": 50
               },
               "size": {
-                "width": 115,
+                "width": 118,
                 "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 360
+                }
               },
               "animations": [
                 {
@@ -67,193 +73,508 @@
                   "trigger": "enter",
                   "from": 0,
                   "to": 1,
-                  "duration": 1600,
+                  "duration": 1500,
                   "easing": "easeOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.048,
+                  "duration": 13700,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -9.6,
+                  "to": 9.6,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
           ]
         },
         {
-          "id": "capa-aurora",
-          "depth": -0.75,
-          "parallaxMode": [
-            "scroll-vertical",
-            "mouse"
-          ],
+          "id": "l-aurora",
+          "depth": -0.72,
           "elements": [
             {
               "type": "png",
               "id": "aurora",
-              "src": "images/aurora.png",
-              "alt": "Aurora boreal verde y violeta",
+              "src": "images/aurora.webp",
               "position": {
                 "x": 50,
-                "y": 20
+                "y": 50
               },
               "size": {
                 "width": 120,
                 "height": "auto"
               },
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 360
+                }
+              },
               "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -28,
+                  "to": 28,
+                  "duration": 6500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
                 {
                   "type": "fadeIn",
                   "trigger": "loop",
                   "from": 0.55,
                   "to": 1,
-                  "duration": 5200,
-                  "yoyo": true,
-                  "easing": "easeInOut"
-                },
-                {
-                  "type": "translateX",
-                  "trigger": "mouse",
-                  "from": -14,
-                  "to": 14
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "capa-fugaz",
-          "depth": -0.6,
-          "elements": [
-            {
-              "type": "png",
-              "id": "estrella-fugaz",
-              "src": "images/estrella-fugaz.png",
-              "alt": "Estrella fugaz",
-              "position": {
-                "x": 30,
-                "y": 12
-              },
-              "size": {
-                "width": 24,
-                "height": "auto"
-              },
-              "opacity": 0.9,
-              "animations": [
-                {
-                  "type": "translateX",
-                  "trigger": "loop",
-                  "from": -80,
-                  "to": 160,
-                  "duration": 7000,
-                  "easing": "easeInQuart",
-                  "loop": true
-                },
-                {
-                  "type": "fadeIn",
-                  "trigger": "loop",
-                  "from": 0,
-                  "to": 1,
-                  "duration": 3500,
+                  "duration": 3800,
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
               ]
             }
-          ]
-        },
-        {
-          "id": "capa-luna",
-          "depth": -0.5,
+          ],
           "parallaxMode": [
             "scroll-vertical",
-            "mouse"
+            "mouse",
+            "gyroscope"
           ],
+          "blur": 1
+        },
+        {
+          "id": "l-moon",
+          "depth": -0.55,
           "elements": [
             {
               "type": "png",
-              "id": "luna",
-              "src": "images/luna.png",
-              "alt": "Luna llena con halo",
+              "id": "moon",
+              "src": "images/moon.webp",
               "position": {
-                "x": 72,
-                "y": 22
+                "x": 50,
+                "y": 50
               },
               "size": {
-                "width": 16,
+                "width": 116,
                 "height": "auto"
               },
+              "anchor": "center",
               "mobile": {
                 "position": {
-                  "x": 70,
-                  "y": 14
+                  "x": 50,
+                  "y": 50
                 },
                 "size": {
-                  "width": 34
+                  "width": 350
                 }
               },
               "animations": [
                 {
                   "type": "translateY",
                   "trigger": "loop",
-                  "from": 0,
-                  "to": -14,
+                  "from": -16,
+                  "to": 16,
                   "duration": 7000,
                   "yoyo": true,
                   "easing": "easeInOut"
                 },
                 {
                   "type": "scale",
-                  "trigger": "enter",
-                  "from": 0.85,
-                  "to": 1,
-                  "duration": 1400,
-                  "easing": "easeOutCubic"
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.04,
+                  "duration": 5500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
-          "id": "capa-montanas-fondo",
+          "id": "l-ridge-far",
           "depth": -0.35,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
           "elements": [
             {
               "type": "png",
-              "id": "montanas-fondo",
-              "src": "images/montanas-fondo.png",
-              "alt": "Cordillera lejana",
+              "id": "ridge-far",
+              "src": "images/ridge-far.webp",
               "position": {
                 "x": 50,
-                "y": 62
+                "y": 50
               },
               "size": {
-                "width": 118,
+                "width": 116,
                 "height": "auto"
               },
-              "anchor": "bottom"
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 360
+                }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.037,
+                  "duration": 12050,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.4,
+                  "to": 7.4,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
-          ]
-        },
-        {
-          "id": "capa-montanas-medio",
-          "depth": -0.12,
+          ],
           "parallaxMode": [
             "scroll-vertical"
           ],
+          "blur": 1
+        },
+        {
+          "id": "l-fog-far",
+          "depth": -0.28,
           "elements": [
             {
               "type": "png",
-              "id": "montanas-medio",
-              "src": "images/montanas-medio.png",
-              "alt": "Cordillera media",
+              "id": "fog-far",
+              "src": "images/fog-far.webp",
               "position": {
                 "x": 50,
-                "y": 78
+                "y": 50
               },
               "size": {
                 "width": 122,
                 "height": "auto"
               },
-              "anchor": "bottom"
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 370
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -30,
+                  "to": 30,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 5000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-ridge-mid",
+          "depth": -0.12,
+          "elements": [
+            {
+              "type": "png",
+              "id": "ridge-mid",
+              "src": "images/ridge-mid.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 360
+                }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.0324,
+                  "duration": 11360,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6.48,
+                  "to": 6.48,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
+          ]
+        },
+        {
+          "id": "l-fog-mid",
+          "depth": 0.0,
+          "elements": [
+            {
+              "type": "png",
+              "id": "fog-mid",
+              "src": "images/fog-mid.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 124,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 380
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -30,
+                  "to": 30,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 5000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-ridge-near",
+          "depth": 0.16,
+          "elements": [
+            {
+              "type": "png",
+              "id": "ridge-near",
+              "src": "images/ridge-near.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 360
+                }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.0332000000000001,
+                  "duration": 11480,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6.64,
+                  "to": 6.64,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
+          ]
+        },
+        {
+          "id": "l-mist-low",
+          "depth": 0.26,
+          "elements": [
+            {
+              "type": "png",
+              "id": "mist-low",
+              "src": "images/mist-low.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 126,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 390
+                }
+              },
+              "animations": [
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -30,
+                  "to": 30,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "fadeIn",
+                  "trigger": "loop",
+                  "from": 0.7,
+                  "to": 1,
+                  "duration": 5000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-foreground",
+          "depth": 0.34,
+          "elements": [
+            {
+              "type": "png",
+              "id": "foreground",
+              "src": "images/foreground.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 50
+                },
+                "size": {
+                  "width": 370
+                }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.0368,
+                  "duration": 12020,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.36,
+                  "to": 7.36,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "scroll-vertical"
           ]
         },
         {
@@ -267,7 +588,7 @@
               "semanticTag": "h1",
               "position": {
                 "x": 50,
-                "y": 34
+                "y": 40
               },
               "font": "Cormorant Garamond",
               "fontSize": "clamp(64px, 11vw, 168px)",
@@ -295,11 +616,11 @@
               "semanticTag": "p",
               "position": {
                 "x": 50,
-                "y": 44
+                "y": 50
               },
               "fontSize": "clamp(15px, 1.6vw, 22px)",
               "fontWeight": 300,
-              "color": "#b8c6e6",
+              "color": "#d2ddf2",
               "letterSpacing": "0.08em",
               "lineHeight": "1.7",
               "textAlign": "center",
@@ -331,9 +652,9 @@
               "semanticTag": "span",
               "position": {
                 "x": 50,
-                "y": 53
+                "y": 60
               },
-              "fontSize": "13px",
+              "fontSize": "15px",
               "color": "#7ee8fa",
               "letterSpacing": "0.3em",
               "animations": [
@@ -357,51 +678,25 @@
               ]
             }
           ]
-        },
-        {
-          "id": "capa-montanas-frente",
-          "depth": 0.3,
-          "parallaxMode": [
-            "scroll-vertical"
-          ],
-          "elements": [
-            {
-              "type": "png",
-              "id": "montanas-frente",
-              "src": "images/montanas-frente.png",
-              "alt": "Cordillera cercana",
-              "position": {
-                "x": 50,
-                "y": 96
-              },
-              "size": {
-                "width": 128,
-                "height": "auto"
-              },
-              "anchor": "bottom"
-            }
-          ]
         }
       ]
     },
     {
       "id": "manifiesto",
-      "height": "130vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #101830 0%, #0d1428 100%)"
+        "value": "linear-gradient(180deg,#070a18 0%,#0a0e1e 100%)"
       },
       "layers": [
         {
-          "id": "capa-const-estrellas",
+          "id": "l-man-sky",
           "depth": -0.7,
-          "blur": 1,
           "elements": [
             {
               "type": "png",
-              "id": "estrellas-manifiesto",
-              "src": "images/estrellas.png",
-              "alt": "Estrellas",
+              "id": "man-sky",
+              "src": "images/sky-night.webp",
               "position": {
                 "x": 50,
                 "y": 50
@@ -410,9 +705,40 @@
                 "width": 120,
                 "height": "auto"
               },
-              "opacity": 0.55
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "opacity": 0.9,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.044,
+                  "duration": 13100,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8.8,
+                  "to": 8.8,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
             }
-          ]
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ],
+          "blur": 5
         },
         {
           "id": "capa-constelacion",
@@ -445,20 +771,22 @@
               },
               "animations": [
                 {
-                  "type": "clipPath",
-                  "trigger": "scroll",
-                  "from": 0,
-                  "to": 100,
-                  "range": [
-                    0.1,
-                    0.55
-                  ]
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.034,
+                  "duration": 11600,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 },
                 {
-                  "type": "rotate",
-                  "trigger": "mouse",
-                  "from": -3,
-                  "to": 3
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -6.8,
+                  "to": 6.8,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
@@ -477,7 +805,7 @@
                 "x": 28,
                 "y": 26
               },
-              "fontSize": "12px",
+              "fontSize": "15px",
               "fontWeight": 600,
               "color": "#7ee8fa",
               "letterSpacing": "0.5em",
@@ -555,8 +883,8 @@
                 "x": 28,
                 "y": 62
               },
-              "fontSize": "clamp(12px, 1.2vw, 15px)",
-              "color": "#7f95bd",
+              "fontSize": "clamp(16px, 1.2vw, 15px)",
+              "color": "#c3d1ee",
               "lineHeight": "1.8",
               "textAlign": "left",
               "mobile": {
@@ -585,12 +913,58 @@
     },
     {
       "id": "puertas",
-      "height": "120vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #101830 0%, #071522 60%, #03121f 100%)"
       },
       "layers": [
+        {
+          "id": "l-pu-sky",
+          "depth": -0.6,
+          "elements": [
+            {
+              "type": "png",
+              "id": "pu-sky",
+              "src": "images/sky-night.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "opacity": 0.65,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.042,
+                  "duration": 12800,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8.4,
+                  "to": 8.4,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ]
+        },
         {
           "id": "capa-titulo-puertas",
           "depth": 0,
@@ -628,8 +1002,8 @@
                 "x": 50,
                 "y": 23
               },
-              "fontSize": "clamp(13px, 1.3vw, 17px)",
-              "color": "#7f95bd",
+              "fontSize": "clamp(16px, 1.3vw, 17px)",
+              "color": "#c3d1ee",
               "textAlign": "center",
               "lineHeight": "1.6",
               "animations": [
@@ -655,14 +1029,14 @@
             {
               "type": "png",
               "id": "puerta-marea-img",
-              "src": "images/medusa.png",
-              "alt": "Medusa rosa luminosa — mundo Marea",
+              "src": "images/planet.webp",
+              "alt": "Planeta anillado — mundo Marea",
               "position": {
                 "x": 30,
                 "y": 52
               },
               "size": {
-                "width": 20,
+                "width": 16,
                 "height": "auto"
               },
               "mobile": {
@@ -671,7 +1045,7 @@
                   "y": 42
                 },
                 "size": {
-                  "width": 46
+                  "width": 38
                 }
               },
               "interactive": true,
@@ -747,8 +1121,8 @@
                 "x": 30,
                 "y": 77
               },
-              "fontSize": "13px",
-              "color": "#5f7ba6",
+              "fontSize": "15px",
+              "color": "#a9bce0",
               "letterSpacing": "0.14em",
               "textAlign": "center",
               "mobile": {
@@ -862,8 +1236,8 @@
                 "x": 70,
                 "y": 77
               },
-              "fontSize": "13px",
-              "color": "#a06a52",
+              "fontSize": "15px",
+              "color": "#e0a583",
               "letterSpacing": "0.14em",
               "textAlign": "center",
               "mobile": {
@@ -879,130 +1253,205 @@
     },
     {
       "id": "profundidad",
-      "height": "110vh",
+      "height": "95vh",
       "background": {
         "type": "gradient",
         "value": "linear-gradient(180deg, #03121f 0%, #071726 100%)"
       },
       "layers": [
         {
-          "id": "capa-3d-fondo",
-          "depth": -0.5,
-          "blur": 3,
-          "perspective3d": true,
-          "parallaxMode": [
-            "mouse"
-          ],
+          "id": "l-pr-sky",
+          "depth": -0.6,
           "elements": [
             {
               "type": "png",
-              "id": "montanas-3d-fondo",
-              "src": "images/montanas-fondo.png",
-              "alt": "Cordillera difusa",
+              "id": "pr-sky",
+              "src": "images/sky-night.webp",
               "position": {
                 "x": 50,
-                "y": 55
+                "y": 50
               },
               "size": {
-                "width": 115,
+                "width": 120,
                 "height": "auto"
               },
-              "opacity": 0.55,
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "opacity": 0.9,
               "animations": [
                 {
-                  "type": "rotateY",
-                  "trigger": "mouse",
-                  "from": -7,
-                  "to": 7
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.042,
+                  "duration": 12800,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8.4,
+                  "to": 8.4,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
-          ]
+          ],
+          "blur": 5
         },
         {
-          "id": "capa-3d-luna",
-          "depth": -0.2,
-          "perspective3d": true,
+          "id": "l-pr-ridge",
+          "depth": -0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "pr-ridge",
+              "src": "images/ridge-far.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 116,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "opacity": 0.85,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.036,
+                  "duration": 11900,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.2,
+                  "to": 7.2,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
           "parallaxMode": [
             "mouse",
             "gyroscope"
-          ],
-          "elements": [
-            {
-              "type": "png",
-              "id": "luna-3d",
-              "src": "images/luna.png",
-              "alt": "Luna en 3D",
-              "position": {
-                "x": 68,
-                "y": 30
-              },
-              "size": {
-                "width": 15,
-                "height": "auto"
-              },
-              "mobile": {
-                "position": {
-                  "x": 70,
-                  "y": 22
-                },
-                "size": {
-                  "width": 32
-                }
-              },
-              "animations": [
-                {
-                  "type": "rotateY",
-                  "trigger": "mouse",
-                  "from": -16,
-                  "to": 16
-                },
-                {
-                  "type": "rotateX",
-                  "trigger": "mouse",
-                  "from": 8,
-                  "to": -8
-                },
-                {
-                  "type": "rotateY",
-                  "trigger": "gyroscope",
-                  "from": -14,
-                  "to": 14
-                }
-              ]
-            }
           ]
         },
         {
-          "id": "capa-3d-frente",
-          "depth": 0.25,
-          "perspective3d": true,
-          "parallaxMode": [
-            "mouse"
-          ],
+          "id": "l-pr-moon",
+          "depth": -0.15,
           "elements": [
             {
               "type": "png",
-              "id": "montanas-3d-frente",
-              "src": "images/montanas-frente.png",
-              "alt": "Cordillera en primer plano",
+              "id": "pr-moon",
+              "src": "images/moon.webp",
               "position": {
                 "x": 50,
-                "y": 88
+                "y": 50
               },
               "size": {
-                "width": 125,
+                "width": 112,
                 "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 350
+                }
               },
               "animations": [
                 {
-                  "type": "rotateY",
-                  "trigger": "mouse",
-                  "from": 5,
-                  "to": -5
+                  "type": "translateY",
+                  "trigger": "loop",
+                  "from": -16,
+                  "to": 16,
+                  "duration": 7000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.04,
+                  "duration": 5500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
                 }
               ]
             }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
+          ]
+        },
+        {
+          "id": "l-pr-front",
+          "depth": 0.3,
+          "elements": [
+            {
+              "type": "png",
+              "id": "pr-front",
+              "src": "images/foreground.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 370
+                }
+              },
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.036,
+                  "duration": 11900,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -7.2,
+                  "to": 7.2,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "parallaxMode": [
+            "mouse",
+            "gyroscope"
           ]
         },
         {
@@ -1050,8 +1499,8 @@
                 "x": 32,
                 "y": 47
               },
-              "fontSize": "clamp(13px, 1.3vw, 16px)",
-              "color": "#7f95bd",
+              "fontSize": "clamp(16px, 1.3vw, 16px)",
+              "color": "#c3d1ee",
               "lineHeight": "1.8",
               "textAlign": "left",
               "mobile": {
@@ -1078,12 +1527,59 @@
     },
     {
       "id": "colofon",
-      "height": "70vh",
+      "height": "62vh",
       "background": {
         "type": "color",
         "value": "#03121f"
       },
       "layers": [
+        {
+          "id": "l-co-sky",
+          "depth": -0.5,
+          "elements": [
+            {
+              "type": "png",
+              "id": "co-sky",
+              "src": "images/sky-night.webp",
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "size": {
+                "width": 120,
+                "height": "auto"
+              },
+              "anchor": "center",
+              "mobile": {
+                "size": {
+                  "width": 360
+                }
+              },
+              "opacity": 0.5,
+              "animations": [
+                {
+                  "type": "scale",
+                  "trigger": "loop",
+                  "from": 1,
+                  "to": 1.04,
+                  "duration": 12500,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                },
+                {
+                  "type": "translateX",
+                  "trigger": "loop",
+                  "from": -8.0,
+                  "to": 8.0,
+                  "duration": 12000,
+                  "yoyo": true,
+                  "easing": "easeInOut"
+                }
+              ]
+            }
+          ],
+          "blur": 5
+        },
         {
           "id": "capa-colofon",
           "depth": 0,
@@ -1120,8 +1616,8 @@
                 "x": 50,
                 "y": 52
               },
-              "fontSize": "clamp(13px, 1.3vw, 16px)",
-              "color": "#7f95bd",
+              "fontSize": "clamp(16px, 1.3vw, 16px)",
+              "color": "#c3d1ee",
               "lineHeight": "1.8",
               "textAlign": "center",
               "animations": [
@@ -1144,7 +1640,7 @@
                 "x": 50,
                 "y": 66
               },
-              "fontSize": "14px",
+              "fontSize": "15px",
               "color": "#7ee8fa",
               "letterSpacing": "0.2em",
               "textAlign": "center",
@@ -1175,5 +1671,17 @@
     "size": 18,
     "hoverScale": 2.4,
     "blendMode": "difference"
+  },
+  "quality": {
+    "mobile": {
+      "maxLayers": 16,
+      "blurEnabled": true,
+      "loopFps": 30
+    },
+    "desktop": {
+      "maxLayers": 24,
+      "blurEnabled": true,
+      "loopFps": 60
+    }
   }
 }
