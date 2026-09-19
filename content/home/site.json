@@ -153,8 +153,7 @@
             "scroll-vertical",
             "mouse",
             "gyroscope"
-          ],
-          "blur": 1
+          ]
         },
         {
           "id": "l-moon",
@@ -259,8 +258,7 @@
           ],
           "parallaxMode": [
             "scroll-vertical"
-          ],
-          "blur": 1
+          ]
         },
         {
           "id": "l-fog-far",
@@ -737,8 +735,7 @@
           "parallaxMode": [
             "mouse",
             "gyroscope"
-          ],
-          "blur": 5
+          ]
         },
         {
           "id": "capa-constelacion",
@@ -1303,8 +1300,7 @@
                 }
               ]
             }
-          ],
-          "blur": 5
+          ]
         },
         {
           "id": "l-pr-ridge",
@@ -1577,8 +1573,7 @@
                 }
               ]
             }
-          ],
-          "blur": 5
+          ]
         },
         {
           "id": "capa-colofon",
