@@ -888,7 +888,6 @@
         {
           "id": "capa-3d-fondo",
           "depth": -0.5,
-          "blur": 3,
           "perspective3d": true,
           "parallaxMode": [
             "mouse"

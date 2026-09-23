@@ -213,7 +213,6 @@
         {
           "id": "capa-peces-lejanos",
           "depth": -0.55,
-          "blur": 2.5,
           "parallaxMode": [
             "scroll-vertical"
           ],

@@ -220,7 +220,6 @@
           "id": "capa-calor",
           "depth": 0.15,
           "blendMode": "screen",
-          "blur": 1.5,
           "elements": [
             {
               "type": "png",
@@ -272,7 +271,6 @@
         {
           "id": "capa-nubes",
           "depth": -0.5,
-          "blur": 2,
           "parallaxMode": [
             "scroll-vertical"
           ],
