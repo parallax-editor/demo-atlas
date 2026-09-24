@@ -38,7 +38,7 @@
       "height": "160vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #05070f 0%, #0b1026 55%, #101830 100%)"
+        "value": "linear-gradient(180deg, #04060e 0%, #0a0f28 40%, #141a3a 70%, #1d2448 100%)"
       },
       "layers": [
         {
@@ -51,7 +51,7 @@
             {
               "type": "png",
               "id": "estrellas",
-              "src": "images/estrellas.png",
+              "src": "images/estrellas.svg",
               "alt": "Cielo estrellado",
               "position": {
                 "x": 50,
@@ -70,7 +70,8 @@
                   "duration": 1600,
                   "easing": "easeOut"
                 }
-              ]
+              ],
+              "objectFit": "cover"
             }
           ]
         },
@@ -85,7 +86,7 @@
             {
               "type": "png",
               "id": "aurora",
-              "src": "images/aurora.png",
+              "src": "images/aurora.svg",
               "alt": "Aurora boreal verde y violeta",
               "position": {
                 "x": 50,
@@ -111,7 +112,8 @@
                   "from": -14,
                   "to": 14
                 }
-              ]
+              ],
+              "objectFit": "cover"
             }
           ]
         },
@@ -122,7 +124,7 @@
             {
               "type": "png",
               "id": "estrella-fugaz",
-              "src": "images/estrella-fugaz.png",
+              "src": "images/estrella-fugaz.svg",
               "alt": "Estrella fugaz",
               "position": {
                 "x": 30,
@@ -152,7 +154,8 @@
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
-              ]
+              ],
+              "objectFit": "cover"
             }
           ]
         },
@@ -167,11 +170,11 @@
             {
               "type": "png",
               "id": "luna",
-              "src": "images/luna.png",
+              "src": "images/luna.svg",
               "alt": "Luna llena con halo",
               "position": {
-                "x": 72,
-                "y": 22
+                "x": 74,
+                "y": 8
               },
               "size": {
                 "width": 16,
@@ -204,7 +207,8 @@
                   "duration": 1400,
                   "easing": "easeOutCubic"
                 }
-              ]
+              ],
+              "objectFit": "cover"
             }
           ]
         },
@@ -212,13 +216,14 @@
           "id": "capa-montanas-fondo",
           "depth": -0.35,
           "parallaxMode": [
-            "scroll-vertical"
+            "scroll-vertical",
+            "mouse"
           ],
           "elements": [
             {
               "type": "png",
               "id": "montanas-fondo",
-              "src": "images/montanas-fondo.png",
+              "src": "images/montanas-fondo.svg",
               "alt": "Cordillera lejana",
               "position": {
                 "x": 50,
@@ -228,7 +233,8 @@
                 "width": 118,
                 "height": "auto"
               },
-              "anchor": "bottom"
+              "anchor": "bottom",
+              "objectFit": "cover"
             }
           ]
         },
@@ -236,13 +242,14 @@
           "id": "capa-montanas-medio",
           "depth": -0.12,
           "parallaxMode": [
-            "scroll-vertical"
+            "scroll-vertical",
+            "mouse"
           ],
           "elements": [
             {
               "type": "png",
               "id": "montanas-medio",
-              "src": "images/montanas-medio.png",
+              "src": "images/montanas-medio.svg",
               "alt": "Cordillera media",
               "position": {
                 "x": 50,
@@ -252,7 +259,8 @@
                 "width": 122,
                 "height": "auto"
               },
-              "anchor": "bottom"
+              "anchor": "bottom",
+              "objectFit": "cover"
             }
           ]
         },
@@ -362,13 +370,14 @@
           "id": "capa-montanas-frente",
           "depth": 0.3,
           "parallaxMode": [
-            "scroll-vertical"
+            "scroll-vertical",
+            "mouse"
           ],
           "elements": [
             {
               "type": "png",
               "id": "montanas-frente",
-              "src": "images/montanas-frente.png",
+              "src": "images/montanas-frente.svg",
               "alt": "Cordillera cercana",
               "position": {
                 "x": 50,
@@ -378,7 +387,8 @@
                 "width": 128,
                 "height": "auto"
               },
-              "anchor": "bottom"
+              "anchor": "bottom",
+              "objectFit": "cover"
             }
           ]
         }
@@ -400,7 +410,7 @@
             {
               "type": "png",
               "id": "estrellas-manifiesto",
-              "src": "images/estrellas.png",
+              "src": "images/estrellas.svg",
               "alt": "Estrellas",
               "position": {
                 "x": 50,
@@ -424,7 +434,7 @@
             {
               "type": "png",
               "id": "constelacion",
-              "src": "images/constelacion.png",
+              "src": "images/constelacion.svg",
               "alt": "Constelación dibujándose",
               "position": {
                 "x": 74,
@@ -655,7 +665,7 @@
             {
               "type": "png",
               "id": "puerta-marea-img",
-              "src": "images/medusa.png",
+              "src": "images/medusa.svg",
               "alt": "Medusa rosa luminosa — mundo Marea",
               "position": {
                 "x": 30,
@@ -770,7 +780,7 @@
             {
               "type": "png",
               "id": "puerta-brasa-img",
-              "src": "images/sol.png",
+              "src": "images/sol.svg",
               "alt": "Sol ardiente — mundo Brasa",
               "position": {
                 "x": 70,
@@ -896,7 +906,7 @@
             {
               "type": "png",
               "id": "montanas-3d-fondo",
-              "src": "images/montanas-fondo.png",
+              "src": "images/montanas-fondo.svg",
               "alt": "Cordillera difusa",
               "position": {
                 "x": 50,
@@ -930,7 +940,7 @@
             {
               "type": "png",
               "id": "luna-3d",
-              "src": "images/luna.png",
+              "src": "images/luna.svg",
               "alt": "Luna en 3D",
               "position": {
                 "x": 68,
@@ -983,7 +993,7 @@
             {
               "type": "png",
               "id": "montanas-3d-frente",
-              "src": "images/montanas-frente.png",
+              "src": "images/montanas-frente.svg",
               "alt": "Cordillera en primer plano",
               "position": {
                 "x": 50,
