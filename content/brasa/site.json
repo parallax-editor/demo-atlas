@@ -38,7 +38,7 @@
       "height": "170vh",
       "background": {
         "type": "gradient",
-        "value": "linear-gradient(180deg, #2b0f2e 0%, #7a2c3f 45%, #f4845f 100%)"
+        "value": "linear-gradient(180deg, #241033 0%, #5e2340 35%, #a83f4a 62%, #e87a52 85%, #f7a866 100%)"
       },
       "layers": [
         {
@@ -51,27 +51,18 @@
             {
               "type": "png",
               "id": "sol",
-              "src": "images/sol.png",
+              "src": "images/sol.svg",
               "alt": "Sol ardiente",
               "position": {
                 "x": 50,
-                "y": 40
-              },
-              "size": {
-                "width": 30,
-                "height": "auto"
-              },
-              "mobile": {
-                "size": {
-                  "width": 62
-                }
+                "y": 20
               },
               "animations": [
                 {
                   "type": "translateY",
                   "trigger": "scroll",
-                  "from": 120,
-                  "to": -160,
+                  "from": 30,
+                  "to": -260,
                   "range": [
                     0,
                     1
@@ -86,64 +77,21 @@
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "capa-titulo-brasa",
-          "depth": -0.05,
-          "elements": [
-            {
-              "type": "text",
-              "id": "titulo-brasa",
-              "content": "Brasa",
-              "semanticTag": "h1",
-              "position": {
-                "x": 50,
-                "y": 24
+              ],
+              "objectFit": "cover",
+              "size": {
+                "width": 34,
+                "height": "auto"
               },
-              "font": "Cormorant Garamond",
-              "fontSize": "clamp(56px, 9.5vw, 140px)",
-              "fontWeight": 500,
-              "color": "#ffe9d6",
-              "letterSpacing": "0.24em",
-              "textAlign": "center",
-              "splitMode": "chars",
-              "staggerDelay": 60,
-              "animations": [
-                {
-                  "type": "fadeIn",
-                  "trigger": "enter",
-                  "from": 0,
-                  "to": 1,
-                  "duration": 900
+              "mobile": {
+                "position": {
+                  "x": 50,
+                  "y": 16
+                },
+                "size": {
+                  "width": 70
                 }
-              ]
-            },
-            {
-              "type": "text",
-              "id": "sub-brasa",
-              "content": "el sol sube contigo",
-              "semanticTag": "p",
-              "position": {
-                "x": 50,
-                "y": 34
-              },
-              "fontSize": "clamp(13px, 1.4vw, 18px)",
-              "color": "#ffd7b8",
-              "letterSpacing": "0.22em",
-              "textAlign": "center",
-              "animations": [
-                {
-                  "type": "fadeIn",
-                  "trigger": "enter",
-                  "from": 0,
-                  "to": 1,
-                  "duration": 900,
-                  "delay": 600
-                }
-              ]
+              }
             }
           ]
         },
@@ -151,13 +99,14 @@
           "id": "capa-duna-fondo",
           "depth": -0.3,
           "parallaxMode": [
-            "scroll-vertical"
+            "scroll-vertical",
+            "mouse"
           ],
           "elements": [
             {
               "type": "png",
               "id": "duna-fondo",
-              "src": "images/duna-fondo.png",
+              "src": "images/duna-fondo.svg",
               "alt": "Duna lejana",
               "position": {
                 "x": 50,
@@ -166,7 +115,9 @@
               "size": {
                 "width": 118,
                 "height": "auto"
-              }
+              },
+              "objectFit": "cover",
+              "anchor": "bottom"
             }
           ]
         },
@@ -174,13 +125,14 @@
           "id": "capa-duna-media",
           "depth": -0.1,
           "parallaxMode": [
-            "scroll-vertical"
+            "scroll-vertical",
+            "mouse"
           ],
           "elements": [
             {
               "type": "png",
               "id": "duna-media",
-              "src": "images/duna-media.png",
+              "src": "images/duna-media.svg",
               "alt": "Duna media",
               "position": {
                 "x": 50,
@@ -189,7 +141,9 @@
               "size": {
                 "width": 124,
                 "height": "auto"
-              }
+              },
+              "objectFit": "cover",
+              "anchor": "bottom"
             }
           ]
         },
@@ -197,13 +151,14 @@
           "id": "capa-duna-frente",
           "depth": 0.28,
           "parallaxMode": [
-            "scroll-vertical"
+            "scroll-vertical",
+            "mouse"
           ],
           "elements": [
             {
               "type": "png",
               "id": "duna-frente",
-              "src": "images/duna-frente.png",
+              "src": "images/duna-frente.svg",
               "alt": "Duna cercana",
               "position": {
                 "x": 50,
@@ -212,7 +167,9 @@
               "size": {
                 "width": 132,
                 "height": "auto"
-              }
+              },
+              "objectFit": "cover",
+              "anchor": "bottom"
             }
           ]
         },
@@ -224,7 +181,7 @@
             {
               "type": "png",
               "id": "calor",
-              "src": "images/calor.png",
+              "src": "images/calor.svg",
               "alt": "Vibración de calor",
               "position": {
                 "x": 50,
@@ -254,6 +211,84 @@
                   "yoyo": true,
                   "easing": "easeInOut"
                 }
+              ],
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "id": "capa-aves",
+          "depth": 0.12,
+          "parallaxMode": [
+            "scroll-vertical",
+            "mouse"
+          ],
+          "elements": [
+            {
+              "type": "png",
+              "id": "aves",
+              "src": "images/aves.svg",
+              "objectFit": "cover",
+              "position": {
+                "x": 50,
+                "y": 50
+              }
+            }
+          ]
+        },
+        {
+          "id": "capa-titulo-brasa",
+          "depth": -0.05,
+          "elements": [
+            {
+              "type": "text",
+              "id": "titulo-brasa",
+              "content": "Brasa",
+              "semanticTag": "h1",
+              "position": {
+                "x": 50,
+                "y": 8
+              },
+              "font": "Cormorant Garamond",
+              "fontSize": "clamp(56px, 9.5vw, 140px)",
+              "fontWeight": 500,
+              "color": "#ffe9d6",
+              "letterSpacing": "0.24em",
+              "textAlign": "center",
+              "splitMode": "chars",
+              "staggerDelay": 60,
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "sub-brasa",
+              "content": "el sol sube contigo",
+              "semanticTag": "p",
+              "position": {
+                "x": 50,
+                "y": 18
+              },
+              "fontSize": "clamp(13px, 1.4vw, 18px)",
+              "color": "#ffd7b8",
+              "letterSpacing": "0.22em",
+              "textAlign": "center",
+              "animations": [
+                {
+                  "type": "fadeIn",
+                  "trigger": "enter",
+                  "from": 0,
+                  "to": 1,
+                  "duration": 900,
+                  "delay": 600
+                }
               ]
             }
           ]
@@ -278,7 +313,7 @@
             {
               "type": "png",
               "id": "nubes-rosa",
-              "src": "images/nubes-rosa.png",
+              "src": "images/nubes-rosa.svg",
               "alt": "Nubes rosadas",
               "position": {
                 "x": 50,
@@ -313,7 +348,7 @@
             {
               "type": "png",
               "id": "aves",
-              "src": "images/aves.png",
+              "src": "images/aves.svg",
               "alt": "Aves cruzando el cielo",
               "position": {
                 "x": 50,
@@ -411,7 +446,7 @@
             {
               "type": "png",
               "id": "estrellas-desierto",
-              "src": "images/estrellas.png",
+              "src": "images/estrellas.svg",
               "alt": "Estrellas del desierto",
               "position": {
                 "x": 50,
@@ -443,7 +478,7 @@
             {
               "type": "png",
               "id": "dunas-noche",
-              "src": "images/duna-fondo.png",
+              "src": "images/duna-fondo.svg",
               "alt": "Dunas de noche",
               "position": {
                 "x": 50,

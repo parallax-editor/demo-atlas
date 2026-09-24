@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs><linearGradient id="ray" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9fe8ff" stop-opacity="0.55"/><stop offset="55%" stop-color="#5fc8e8" stop-opacity="0.14"/><stop offset="100%" stop-color="#5fc8e8" stop-opacity="0"/></linearGradient>
+<filter id="rb" x="-20%" y="-10%" width="140%" height="120%"><feGaussianBlur stdDeviation="14"/></filter></defs>
+<g filter="url(#rb)" style="mix-blend-mode:screen" transform="skewX(-8)">
+<polygon points="470,0 530,0 610,1080 390,1080" fill="url(#ray)" opacity="0.9"/><polygon points="775,0 865,0 970,1080 670,1080" fill="url(#ray)" opacity="0.7"/><polygon points="1125,0 1175,0 1240,1080 1060,1080" fill="url(#ray)" opacity="0.85"/><polygon points="1440,0 1520,0 1610,1080 1350,1080" fill="url(#ray)" opacity="0.6"/><polygon points="240,0 280,0 330,1080 190,1080" fill="url(#ray)" opacity="0.7"/></g></svg>
